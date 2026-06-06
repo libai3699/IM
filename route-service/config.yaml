@@ -1,0 +1,39 @@
+# OpenIM Route Service Configuration
+
+server:
+  port: 10010  # 路由服务端口
+  mode: release  # debug / release
+
+mysql:
+  host: localhost  # 本地部署使用 localhost，Docker部署使用 mysql
+  port: 23306      # 映射到宿主机的端口
+  username: root
+  password: route123456
+  database: openim_route
+  maxOpenConn: 100
+  maxIdleConn: 10
+  maxLifeTime: 3600
+
+# 验证码配置
+verifyCode:
+  validTime: 300      # 验证码有效时间（秒）
+  len: 6              # 验证码长度
+  superCode: "666666" # 超级验证码（用于本地验证）
+  forwardCode: "666666" # 转发给第三方服务器的验证码（登录、找回密码时使用）
+  
+  # 短信宝配置
+  smsbao:
+    apiUrl: "https://api.smsbao.com/sms"
+    username: "naila78589"
+    password: "cb16979fd5ba7497bbcec4b1157aad11"
+    signName: "广州乃拉科技有限公司"
+
+# Redis 配置（用于存储验证码）
+redis:
+  address: localhost:26379  # 本地部署使用 localhost:26379，Docker部署使用 redis:6379
+  password: ""
+  db: 0
+
+log:
+  level: info  # debug / info / warn / error
+  file: ./logs/route.log

@@ -1,0 +1,68 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.assist-v3",
+    "module": "oppo",
+    "version": "3.1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "6.1.1",
+      "buildId": "wyjuhbohjzdudhuvzvg57brwpy"
+    }
+  },
+  "variants": [
+    {
+      "name": "releaseApiPublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "oppo-3.1.0.aar",
+          "url": "oppo-3.1.0.aar",
+          "size": 5737,
+          "sha512": "37b16a310c8c1b00146e6f294319a178a5a78578cb204dbbfde54b7db4b1ded886b58b8688c32b34683486e77ebb76fbf363d409c724cbd0e5fd80b4da759bb8",
+          "sha256": "8e3742b5d651f1b492e0e8399813608daa7a2105a71561e150f31bc95e20694e",
+          "sha1": "1a17de4eddb0d79600cc6c509251e7e4d15d523f",
+          "md5": "38152a948e679c4757d4d1e8c917cd13"
+        }
+      ]
+    },
+    {
+      "name": "releaseRuntimePublication",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.libraryelements": "aar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "dependencies": [
+        {
+          "group": "com.heytap.msp",
+          "module": "push",
+          "version": {
+            "requires": "3.0.0"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "oppo-3.1.0.aar",
+          "url": "oppo-3.1.0.aar",
+          "size": 5737,
+          "sha512": "37b16a310c8c1b00146e6f294319a178a5a78578cb204dbbfde54b7db4b1ded886b58b8688c32b34683486e77ebb76fbf363d409c724cbd0e5fd80b4da759bb8",
+          "sha256": "8e3742b5d651f1b492e0e8399813608daa7a2105a71561e150f31bc95e20694e",
+          "sha1": "1a17de4eddb0d79600cc6c509251e7e4d15d523f",
+          "md5": "38152a948e679c4757d4d1e8c917cd13"
+        }
+      ]
+    }
+  ]
+}

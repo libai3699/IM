@@ -1,0 +1,122 @@
+2025-09-16 00:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 00:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 00:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 00:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 00:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 01:20:58.714	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 01:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 01:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 01:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 01:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 02:00:00.001	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[tools/conversation.go:74]	start msg destruct cron task
+2025-09-16 02:00:00.002	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[tools/conversation.go:82]	GetAllConversationIDsNumber	{"operationID": "ConversationsDestructMsgs", "num": 0}
+2025-09-16 02:20:58.714	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 02:20:58.714	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 02:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 02:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 02:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 03:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 03:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 03:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 03:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 03:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 04:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 04:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 04:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 04:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 04:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 05:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 05:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 05:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 05:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 05:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 06:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 06:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 06:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 06:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 06:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 07:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 07:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 07:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 07:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 07:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 08:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 08:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 08:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 08:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 08:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 09:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 09:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 09:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 09:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 09:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 10:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 10:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 10:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 10:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 10:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 11:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 11:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 11:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 11:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 11:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 12:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 12:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 12:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 12:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 12:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 13:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 13:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 13:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 13:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 13:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 14:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 14:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 14:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 14:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 14:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 15:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 15:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 15:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 15:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 15:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 16:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 16:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 16:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 16:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 16:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 17:20:58.714	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 17:20:58.714	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 17:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 17:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 17:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 18:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 18:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 18:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 18:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 18:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 19:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 19:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 19:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 19:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 19:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 20:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 20:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 20:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 20:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 20:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 21:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 21:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 21:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 21:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 21:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 22:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 22:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 22:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 22:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 22:20:58.716	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}
+2025-09-16 23:20:58.715	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns"}
+2025-09-16 23:20:58.715	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:35]	start resolve now	{"target": "openim:///Msg", "serviceName": "Msg"}
+2025-09-16 23:20:58.716	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/discover.go:103]	get addrs from remote	{"conn": "10.0.38.2:10130"}
+2025-09-16 23:20:58.717	[37mDEBUG[0m	[37m[PID:19504][0m	[37mcronTask[0m	[zookeeper/resolver.go:61]	resolve now finished	{"target": "openim:///Msg", "conns": [{"Addr":"10.0.38.2:10130","ServerName":"Msg","Attributes":null,"BalancerAttributes":null,"Metadata":null}]}
+2025-09-16 23:20:58.717	[34mINFO[0m	[34m[PID:19504][0m	[34mcronTask[0m	[log/zk_logger.go:29]	zookeeper output	{"msg": "refresh local conns success"}

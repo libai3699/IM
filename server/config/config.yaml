@@ -1,0 +1,562 @@
+# Copyright © 2023 OpenIM. All rights reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the License);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# -----------------------------------------------------------------
+# TODO: This config file is the template file
+# --| source: deployments/templates/openim.yaml
+# --| env: scripts/install/environment
+# --| target: config/config.yaml
+# -----------------------------------------------------------------
+
+envs:
+  discovery: zookeeper
+
+###################### Zookeeper ######################
+# Zookeeper configuration
+# It's not recommended to modify the schema
+#
+# Zookeeper address
+# Zookeeper username
+# Zookeeper password
+zookeeper:
+  schema: openim
+  address: [ 127.0.0.1:12181 ]
+  username:
+  password:
+
+###################### Mysql ######################
+# MySQL configuration
+# Currently, only single machine setup is supported
+#
+# Maximum number of open connections
+# Maximum number of idle connections
+# Maximum lifetime in seconds a connection can be reused
+# Log level: 1=slient, 2=error, 3=warn, 4=info
+# Slow query threshold in milliseconds
+mysql:
+  address: [ 127.0.0.1:13306 ]
+  username: root
+  password: P8x#vR2wN5L
+  database: openIM_v3
+  maxOpenConn: 2000  # ✅ 从1000增加到2000
+  maxIdleConn: 500   # ✅ 从100增加到500，保持更多空闲连接
+  maxLifeTime: 60
+  logLevel: 4
+  slowThreshold: 500
+
+###################### Mongo ######################
+# MongoDB configuration
+# If uri is not empty, it will be used directly
+#
+# MongoDB address for standalone setup, Mongos address for sharded cluster setup
+# Default MongoDB database name
+# Maximum connection pool size
+mongo:
+  uri:
+  address: [ 127.0.0.1:37017 ]
+  database: openIM_v3
+  username: openIM
+  password: openIm123456789
+  maxPoolSize: 500  # ✅ 从100增加到500，支持更高并发
+  minPoolSize: 50   # ✅ 最小连接池大小，保持50个连接常驻
+  maxConnIdleTime: 300000  # ✅ 连接最大空闲时间5分钟（毫秒）
+  socketTimeout: 60000     # ✅ Socket超时60秒
+  connectTimeout: 30000    # ✅ 连接超时30秒
+  serverSelectionTimeout: 30000  # ✅ 服务器选择超时30秒
+
+###################### Redis configuration information ######################
+# Redis configuration
+#
+# Username is required only for Redis version 6.0+
+redis:
+  address: [ 127.0.0.1:16379 ]
+  username:
+  password: "Qw5!dG8yT1rE3%sA"
+
+###################### Kafka configuration information ######################
+# Kafka configuration
+#
+# Kafka username
+# Kafka password
+# It's not recommended to modify this topic name
+# Consumer group ID, it's not recommended to modify
+kafka:
+  username:
+  password:
+  addr: [ 127.0.0.1:19094 ]
+  latestMsgToRedis:
+    topic: "latestMsgToRedis"
+  offlineMsgToMongo:
+    topic: "offlineMsgToMongoMysql"
+  msgToPush:
+    topic: "msgToPush"
+  consumerGroupID:
+    msgToRedis: redis
+    msgToMongo: mongo
+    msgToMySql: mysql
+    msgToPush: push
+
+###################### RPC configuration information ######################
+# RPC configuration
+#
+# IP address to register with zookeeper when starting RPC, the IP and corresponding rpcPort should be accessible by api/gateway
+# Default listen IP is 0.0.0.0
+rpc:
+  registerIP:
+  listenIP: 0.0.0.0
+
+###################### API configuration information ######################
+# API configuration
+#
+# API service port
+# Default listen IP is 0.0.0.0
+api:
+  openImApiPort: [ 10002 ]
+  listenIP: 0.0.0.0
+
+###################### Object configuration information ######################
+# Object storage configuration
+#
+# Use minio for object storage
+# API URL should be accessible by the app
+# It's not recommended to modify the bucket name
+# Endpoint should be accessible by the app
+# Session token
+# Configuration for Tencent COS
+# Configuration for Aliyun OSS
+# apiURL is the address of the api, the access address of the app, use s3 must be configured
+# minio.endpoint can be configured as an intranet address,
+# minio.signEndpoint is minio public network address
+object:
+  enable: "cos"
+  apiURL: "https://im.rjt8z.com/api"
+  minio:
+    bucket: "openim"
+    endpoint: "http://127.0.0.1:10005"
+    accessKeyID: "root"
+    secretAccessKey: "openIm123456789"
+    sessionToken:
+    signEndpoint: "https://im.rjt8z.com/minio"
+    publicRead: false
+  cos:
+    bucketURL: "https://im-1369631139.cos.ap-guangzhou.myqcloud.com"
+    secretID: "IKIDTq35yfTQTUPH3pU5iUDmJk2SwLbjop9L"
+    secretKey: "6yd5c4RcbWN3lNn5IJ7xfDdsulQvDORJ"
+    sessionToken:
+    publicRead: false
+  oss:
+    endpoint:
+    bucket:
+    bucketURL:
+    accessKeyID:
+    accessKeySecret:
+    sessionToken:
+    publicRead: false
+
+###################### RPC Port Configuration ######################
+# RPC service ports
+# These ports are passed into the program by the script and are not recommended to modify
+# For launching multiple programs, just fill in multiple ports separated by commas
+# For example, [10110, 10111]
+rpcPort:
+  openImUserPort: [ 10110 ]
+  openImFriendPort: [ 10120 ]
+  openImMessagePort: [ 10130 ]
+  openImGroupPort: [ 10150 ]
+  openImAuthPort: [ 10160 ]
+  openImPushPort: [ 10170 ]
+  openImConversationPort: [ 10180 ]
+  openImThirdPort: [ 10190 ]
+  openImEncryptionPort: [ 10200 ]
+  openImRtcPort: [ 11300 ]
+
+###################### RPC Register Name Configuration ######################
+# RPC service names for registration, it's not recommended to modify these
+rpcRegisterName:
+  openImUserName: User
+  openImFriendName: Friend
+  openImMsgName: Msg
+  openImPushName: Push
+  openImMessageGatewayName: MessageGateway
+  openImGroupName: Group
+  openImAuthName: Auth
+  openImConversationName: Conversation
+  openImThirdName: Third
+  openImRtcName: Rtc
+  openImEncryptionName: Encryption
+
+###################### Log Configuration ######################
+# Log configuration
+#
+# Storage directory
+# Log rotation time
+# Maximum number of logs to retain
+# Log level, 6 means all levels
+# Whether to output to stdout
+# Whether to output in json format
+# Whether to include stack trace in logs
+log:
+  storageLocation: ../logs/
+  rotationTime: 24
+  remainRotationCount: 2
+  remainLogLevel: 2
+  isStdout: false
+  isJson: false
+  withStack: false
+
+###################### Variables definition ######################
+# Long connection server configuration
+#
+# Websocket port for msg_gateway
+# Maximum number of websocket connections
+# Maximum length of websocket request package
+# Websocket connection handshake timeout
+longConnSvr:
+  openImWsPort: [ 10001, 10002, 10003, 10004 ]
+  websocketMaxConnNum: 100000
+  openImMessageGatewayPort: [ 10140, 10141, 10142, 10143 ]
+  websocketMaxMsgLen: 4096
+  websocketTimeout: 10
+  isEncryption: false
+
+# Push notification service configuration
+#
+# Use GeTui for push notifications
+# GeTui offline push configuration
+# FCM offline push configuration
+# Account file, place it in the config directory
+# JPush configuration, modify these after applying in JPush backend
+push:
+  enable: false
+  jpns:
+    appId: ""
+    masterSecret: ""
+    pushUrl: ""
+    pushIntent: ""
+  getui:
+    pushUrl: ""
+    masterSecret: ""
+    appKey: ""
+    intent: "intent:#Intent;action=android.intent.action.oppopush;launchFlags=0x14000000;component=io.openim.app/io.dcloud.PandoraEntry;S.UP-OL-SU=true;S.title=;S.content=;end"
+  fcm:
+    serviceAccount: ""
+
+# App manager configuration
+#
+# Built-in app manager user IDs
+# Built-in app manager nicknames
+# 重要：请修改为你自己的管理员账号，不要使用默认值
+manager:
+  userID: [ "admin2024" ]  # 请修改为你的管理员ID
+  nickname: [ "系统管理员" ]
+
+# 超级管理员配置，对应代码结构体 tag 为 im-admin
+# 重要：请修改为你自己的管理员账号，不要使用默认值
+im-admin:
+  userID: [ "admin2024" ]  # 请修改为你的管理员ID
+  nickname: [ "系统管理员" ]
+
+# Multi-platform login policy
+# For each platform(Android, iOS, Windows, Mac, web), only one can be online at a time
+multiLoginPolicy: 1
+
+# Whether to store messages in MySQL, messages in MySQL are only used for management background
+chatPersistenceMysql: false
+
+# Message cache timeout in seconds, it's not recommended to modify
+msgCacheTimeout: 86400
+
+# Whether to enable read receipts for group chat
+groupMessageHasReadReceiptEnable: true
+
+# Whether to enable read receipts for single chat
+singleMessageHasReadReceiptEnable: true
+
+# MongoDB offline message retention period in days
+retainChatRecords: 365
+
+# Schedule to clear expired messages(older than retainChatRecords days) in MongoDB every Wednesday at 2am
+# This deletion is just for cleaning up disk usage according to previous configuration retainChatRecords, no notification will be sent
+chatRecordsClearTime: "0 2 * * 3"
+# Schedule to auto delete messages every day at 2am
+# This deletion is for messages that have been retained for more than msg_destruct_time (seconds) in the conversation field
+msgDestructTime: "0 2 * * *"
+
+# Secret key - 已修改，旧的secret已失效
+secret: "CxPnndjilAbD1q7GbBRgSrO_wuKX0IuyX1TQwvUHBcs"
+
+# Token policy
+#
+# Token expiration period in days
+tokenPolicy:
+  expire: 90
+
+# Message verification policy
+#
+# Whether to verify friendship when sending messages
+messageVerify:
+  friendVerify: true
+
+# iOS push notification configuration
+#
+# iOS push notification sound
+# Whether to count badge
+# Whether it's production environment
+iosPush:
+  pushSound: "xxx"
+  badgeCount: true
+  production: false
+
+###################### Third-party service configuration ######################
+# Callback configuration
+#
+# Callback URL
+# Whether to enable this callback event
+# Timeout in seconds
+# Whether to continue execution if callback fails
+callback:
+  url: http://127.0.0.1:10008/callback/open_im # 回调服务器地址，留空则不启用回调功能
+
+  # 发送单聊消息前回调
+  # 用途：拦截消息、检查敏感词、权限验证
+  beforeSendSingleMsg:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 发送单聊消息后回调
+  # 用途：记录消息日志、统计数据、触发其他业务逻辑
+  afterSendSingleMsg:
+    enable: false
+    timeout: 5
+
+  # 发送群聊消息前回调
+  # 用途：检查群成员权限、过滤敏感内容
+  beforeSendGroupMsg:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 发送群聊消息后回调
+  # 用途：记录群聊日志、统计群活跃度
+  afterSendGroupMsg:
+    enable: false
+    timeout: 5
+
+  # 消息修改回调
+  # 用途：敏感词替换、内容审核、添加水印
+  msgModify:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 用户上线回调
+  # 用途：记录登录日志、更新在线状态、发送欢迎消息
+  userOnline:
+    enable: false
+    timeout: 5
+
+  # 用户下线回调
+  # 用途：记录下线时间、更新最后在线时间
+  userOffline:
+    enable: false
+    timeout: 5
+
+  # 用户被踢下线回调
+  # 用途：记录异常登录、安全审计（如多端登录被踢）
+  userKickOff:
+    enable: false
+    timeout: 5
+
+  # 离线推送回调
+  # 用途：自定义推送内容、过滤不需要推送的消息
+  offlinePush:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 在线推送回调
+  # 用途：自定义在线消息处理逻辑
+  onlinePush:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 超级群在线推送回调
+  # 用途：优化大群消息推送策略
+  superGroupOnlinePush:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 添加好友前回调
+  # 用途：检查是否允许添加、限制添加频率、反垃圾
+  beforeAddFriend:
+    enable: true
+    timeout: 5
+    failedContinue: false
+
+  # 更新用户信息前回调
+  # 用途：审核昵称、头像，防止违规内容
+  beforeUpdateUserInfo:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 创建群组前回调
+  # 用途：只有高级用户才能建群
+  beforeCreateGroup:
+    enable: true
+    timeout: 5
+    failedContinue: false
+
+  # 邀请用户入群前回调
+  # 用途：只有高级用户才能邀请，且被邀请人必须是邀请者的好友
+  beforeInviteUserToGroup:
+    enable: true
+    timeout: 5
+    failedContinue: false
+
+  # 成员加入群组前回调
+  # 用途：检查加群权限、限制群成员数量
+  beforeMemberJoinGroup:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 设置群成员信息前回调
+  # 用途：权限控制、审核群昵称
+  beforeSetGroupMemberInfo:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+  # 设置消息反应扩展回调
+  # 用途：自定义消息互动功能（如表情回应、点赞）
+  setMessageReactionExtensions:
+    enable: false
+    timeout: 5
+    failedContinue: true
+
+###################### Prometheus ######################
+# Prometheus configuration for various services
+# The number of Prometheus ports per service needs to correspond to rpcPort
+# The number of ports needs to be consistent with msg_transfer_service_num in script/path_info.sh
+prometheus:
+  enable: false
+  apiPrometheusPort: [20001]
+  userPrometheusPort: [20110]
+  friendPrometheusPort: [20120]
+  messagePrometheusPort: [20130]
+  messageGatewayPrometheusPort: [20140, 20141, 20142, 20143]
+  groupPrometheusPort: [20150]
+  authPrometheusPort: [20160]
+  pushPrometheusPort: [20170]
+  conversationPrometheusPort: [20180]
+  thirdPrometheusPort: [20190]
+  messageTransferPrometheusPort: [20002, 20200, 20201, 20202]
+  userAddress: "0.0.0.0:20110"
+  friendAddress: "0.0.0.0:20120"
+  messageAddress: "0.0.0.0:20130"
+  messageGatewayAddress: "0.0.0.0:20140"
+  groupAddress: "0.0.0.0:20150"
+  authAddress: "0.0.0.0:20160"
+  pushAddress: "0.0.0.0:20170"
+  conversationAddress: "0.0.0.0:20180"
+  thirdAddress: "0.0.0.0:20190"
+  apiAddress: "0.0.0.0:20001"
+  transAddress: "0.0.0.0:20002"
+  cronTaskAddress: "0.0.0.0:20003"
+
+# Cron task configuration
+# Default cron task interval in seconds
+cron:
+  cronTask:
+    userOnlineStatusTask: "0 */1 * * * ?"
+    userOnlineStatusTaskOnStart: true
+    userOnlineStatusTaskInterval: 60
+
+notification:
+  groupUpdateMessage: 0 # 0:Disable 1:Enable; Send group notification messages
+  userStatusChangedMessage: 0 # 0:Disable 1:Enable; Send user login status update notification message
+  conversationOptUpdateMessage: 0 # 0:Disable 1:Enable; Send conversation setting is changed to the client Notification message of
+  conversationHasReadUpdateMessage: 1 # 0:Disable 1:Enable; Send conversation read to client notification message for message
+
+
+# Config hot reload
+hotReload:
+  enable: false
+
+# Demo Config only for local debug
+demo:
+  serviceAdminID:
+  apiLoginPrefix: "http://localhost:10000/demo"
+  demoPrefix: "http://localhost:10000"
+  apiPrefix: "http://localhost:10002"
+  wsPrefix: "ws://localhost:10001"
+
+# Performance tuning configuration
+# Currently includes: automaxprocs
+performanceTuning:
+  automaxprocs:
+    enabled: true
+    maxProcs: 8
+
+# Opentracing Config only supports jaeger
+# NOTE: We won't collect jaeger spans if this is not active
+# Examples: https://github.com/jaegertracing/jaeger-client-go#environment-variables
+opentracing:
+  enable: false
+  serviceName: openim
+  endpoint: http://localhost:14268/api/traces
+  jaegarAgentHost: localhost
+  jaegarAgentPort: 6831
+  samplerType: const
+  samplerParam: 1
+  reporter: log
+  samplerRateLimit: 1
+
+# Security Configuration
+security:
+  encryptionSwitch: false
+  encryptionKey: "jlsj$#*31asdasd"
+
+# Storage Path Configuration
+storageDir:
+  localStoragePath: "../../static/files"
+
+###################### Long connection configuration information ######################
+# Long connection configuration
+#
+# WebSocket port
+# WebSocket maximum message size
+# Idle connection timeout
+# Long polling port
+# Long polling maximum message size
+# Default listen IP
+# Idle connection timeout
+# Default timeout
+# Websocket read buffer size
+# Websocket write buffer size
+msg:
+  msgGatewayPort: [ 10001, 10002, 10003, 10004 ]
+  maxSearchLimit: 50  # ✅ 从100降低到50，防止恶意搜索攻击
+  maxMsgLimit: 100
+  msgChannelTimeout: 60
+  handshakeTimeout: 1
+  listenIP: 0.0.0.0
+  defaultReadTimeout: 60
+  defaultWriteTimeout: 10
+  readBufferSize: 1024
+  writeBufferSize: 4096

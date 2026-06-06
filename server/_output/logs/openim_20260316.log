@@ -1,0 +1,1774 @@
+Building OpenIM, Parallel compilation compile=4
+no args, build all service
+[32m[success 0316 16:26:31] [0m==>  all service build success, run 'make start' or './scripts/start-all.sh'
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+!!! [0316 16:26:44] Call tree:
+!!! [0316 16:26:44]  1: /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:124 openim::tools::start_service(...)
+!!! [0316 16:26:44]  2: /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:167 openim::tools::pre-start(...)
+[31m!!! Error in /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:107 [0m
+  Error in /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:107. '${cmd}' exited with status 1
+Call stack:
+  1: /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:107 openim::tools::start_service(...)
+  2: /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:124 openim::tools::pre-start(...)
+  3: /www/wwwroot/openIm/server/scripts/install//openim-tools.sh:167 main(...)
+Exiting with status 1
+[31m!!! Error in ./scripts/start-all.sh:75 [0m
+  Error in ./scripts/start-all.sh:75. '${TOOLS_START_SCRIPTS_PATH} openim::tools::pre-start' exited with status 1
+Call stack:
+  1: ./scripts/start-all.sh:75 main(...)
+Exiting with status 1
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0316 16:42:15] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0316 16:42:16] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /www/wwwroot/openIm/server/config/
+Starting openim-api service, port: 10002, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-api
+2026/03/16 16:42:16 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 134942, FD: 10, Started: Mon Mar 16 16:42:15 2026
+[32m[success 0316 16:42:18] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0316 16:42:18] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0316 16:42:18] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-user
+2026/03/16 16:42:18 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@99: : bulk write exception: write errors: [E11000 duplicate key error collection: openIM_v3.user index: user_id_1 dup key: { user_id: "admin2024" }]
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-user/main.go:31 +0x114
+Stopping services on ports: 10120
+[32m[success 0316 16:42:20] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+2026/03/16 16:42:20 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+Stopping services on ports: 10130
+[32m[success 0316 16:42:22] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+2026/03/16 16:42:22 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+Stopping services on ports: 10150
+[32m[success 0316 16:42:24] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-group
+2026/03/16 16:42:24 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+Stopping services on ports: 10160
+[32m[success 0316 16:42:26] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+2026/03/16 16:42:27 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+Stopping services on ports: 10180
+[32m[success 0316 16:42:29] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+2026/03/16 16:42:29 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+Stopping services on ports: 10190
+[32m[success 0316 16:42:31] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-third
+2026/03/16 16:42:31 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+Stopping services on ports: 10200
+[32m[success 0316 16:42:33] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /www/wwwroot/openIm/server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2026/03/16 16:42:33 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking RPC service ports...
+!!! [0316 16:42:40] Port 10110 is not listening
+Port 10120 is listening successfully
+Port 10130 is listening successfully
+Port 10150 is listening successfully
+Port 10160 is listening successfully
+Port 10180 is listening successfully
+Port 10190 is listening successfully
+Port 10200 is listening successfully
+!!! [0316 16:42:40] Some RPC services failed to start on ports: 10110
+!!! [0316 16:42:40] Check logs for details, but continuing with startup...
+openim-rpc.sh executed successfully.
++++ [0316 16:42:40] Starting script: openim-push.sh
++++ [0316 16:42:40] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push
++++ [0316 16:42:40] prepare start push process, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push
++++ [0316 16:42:40] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0316 16:42:40] Failed to stop the openim-push service.
+[32m[success 0316 16:42:40] [0m==>  All specified services were stopped.
++++ [0316 16:42:40] push port list: 10170
++++ [0316 16:42:40] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2026/03/16 16:42:40 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /www/wwwroot/openIm/server/scripts/install/openim-push.sh openim::push::start, PID: 136266, Port: N/A, Start time: Mon Mar 16 16:42:39 2026
+Process openim-push - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /www/wwwroot/openIm/server/config/ --prometheus_port 20170, PID: 136733, Port: 20170
+10170, Start time: Mon Mar 16 16:42:39 2026
+Process openim-push - Command: , PID: 136736, Port: N/A, Start time: 
+[32m[success 0316 16:42:40] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0316 16:42:40] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 16:42:41] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 16:42:41] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 16:42:41] [0m==>  All specified services were stopped.
++++ [0316 16:42:41] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 16:42:41] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 16:42:41 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 16:42:41 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 16:42:41 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000182f00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000182f00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000182f00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000182f00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000582900)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00026f800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00026f800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00026f800, {0xc0001a2010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00026f800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000125f8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 16:42:41 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0000ff800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0000ff800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0000ff800, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0000ff800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000506508)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 137288, Port: N/A, Start time: Mon Mar 16 16:42:40 2026
+[32m[success 0316 16:42:41] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0316 16:42:41] Starting script: openim-msggateway.sh
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 122 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0004a0e40, {0x16b83a0, 0xc000353c00})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:104 +0x21d
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 23 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0003ec1c0, {0x1794ed0, 0xc000010468})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/push.(*Consumer).Start
+	/www/wwwroot/openIm/server/internal/push/consumer_init.go:31 +0x8f
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0316 16:42:41] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0316 16:42:41] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0316 16:42:41] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0316 16:42:42] [0m==>  All specified services were stopped.
++++ [0316 16:42:42] OpenIM Mssage Getway ports: 10140
++++ [0316 16:42:42] OpenIM WS ports: 10001
++++ [0316 16:42:42] OpenIM Prometheus ports: 20140
++++ [0316 16:42:42] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2026/03/16 16:42:42 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /www/wwwroot/openIm/server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 137356, Port: N/A, Start time: Mon Mar 16 16:42:40 2026
+Process openim-msggateway - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /www/wwwroot/openIm/server/config/, PID: 137845, Port: 20140
+10140
+10001, Start time: Mon Mar 16 16:42:41 2026
+Process openim-msggateway - Command: , PID: 137848, Port: N/A, Start time: 
+[32m[success 0316 16:42:42] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0316 16:42:42] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0316 16:42:42] Start OpenIM Cron, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0316 16:42:42] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0316 16:42:42] [0m==>  All specified services were stopped.
++++ [0316 16:42:42] start cron_task process, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2026/03/16 16:42:42 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /www/wwwroot/openIm/server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 137925, Port: N/A, Start time: Mon Mar 16 16:42:41 2026
+Process openim-crontask - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-crontask -c /www/wwwroot/openIm/server/config/, PID: 138388, Port: N/A, Start time: Mon Mar 16 16:42:41 2026
+Process openim-crontask - Command: , PID: 138391, Port: N/A, Start time: 
+[32m[success 0316 16:42:42] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0316 16:42:42] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /www/wwwroot/openIm/server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+
+## Ensuring MessageGateway is running
+MessageGateway is already running.
+[32m[success 0316 16:42:44] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 90210, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 16:42:59] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+!!! [0316 16:42:59] Call tree:
+!!! [0316 16:42:59]  1: ./scripts/install/openim-msgtransfer.sh:145 openim::msgtransfer::check(...)
+!!! [0316 16:42:59]  2: ./scripts/check-all.sh:83 source(...)
+[31m!!! Error in ./scripts/install/openim-msgtransfer.sh:64 [0m
+  Error in ./scripts/install/openim-msgtransfer.sh:64. 'PIDS=$(pgrep -f "${OPENIM_OUTPUT_HOSTBIN}/openim-msgtransfer")' exited with status 1
+Call stack:
+  1: ./scripts/install/openim-msgtransfer.sh:64 openim::msgtransfer::check(...)
+  2: ./scripts/install/openim-msgtransfer.sh:145 source(...)
+  3: ./scripts/check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 16:45:00] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 16:45:00] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 16:45:00] [0m==>  All specified services were stopped.
++++ [0316 16:45:00] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 16:45:00] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 16:45:00 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 16:45:00 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 16:45:00 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0000af800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0000af800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0000af800, {0xc00011c060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0000af800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0005b42c0)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0003c2300, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0003c2300?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0003c2300, {0xc00011a060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0003c2300)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00052c900)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 16:45:00 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004e8f00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004e8f00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004e8f00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004e8f00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012038)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 143376, Port: N/A, Start time: Mon Mar 16 16:44:59 2026
+[32m[success 0316 16:45:00] [0m==>  All processes are running.
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 93 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0005fa680, {0x16b83a0, 0xc0000c0380})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:104 +0x21d
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 90210, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 16:45:57] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+!!! [0316 16:45:57] Call tree:
+!!! [0316 16:45:57]  1: ./install/openim-msgtransfer.sh:145 openim::msgtransfer::check(...)
+!!! [0316 16:45:57]  2: ./check-all.sh:83 source(...)
+[31m!!! Error in ./install/openim-msgtransfer.sh:64 [0m
+  Error in ./install/openim-msgtransfer.sh:64. 'PIDS=$(pgrep -f "${OPENIM_OUTPUT_HOSTBIN}/openim-msgtransfer")' exited with status 1
+Call stack:
+  1: ./install/openim-msgtransfer.sh:64 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 16:54:02] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 16:54:02] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 16:54:02] [0m==>  All specified services were stopped.
++++ [0316 16:54:02] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 16:54:02] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 16:54:02 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 16:54:02 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 16:54:02 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004af200, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004af200?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004af200, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004af200)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000140248)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 16:54:02 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0005b3800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0005b3800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0005b3800, {0xc0001a2010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0005b3800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012538)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000203800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000203800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000203800, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000203800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012418)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 157976, Port: N/A, Start time: Mon Mar 16 16:54:02 2026
+[32m[success 0316 16:54:03] [0m==>  All processes are running.
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 211 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0005c4600, {0x16b83a0, 0xc0000b8000})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:104 +0x21d
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 155378, FD: 8, Started: Mon Mar 16 16:53:39 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 16:54:20] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+!!! [0316 16:54:20] Call tree:
+!!! [0316 16:54:20]  1: ./install/openim-msgtransfer.sh:145 openim::msgtransfer::check(...)
+!!! [0316 16:54:20]  2: ./check-all.sh:83 source(...)
+[31m!!! Error in ./install/openim-msgtransfer.sh:64 [0m
+  Error in ./install/openim-msgtransfer.sh:64. 'PIDS=$(pgrep -f "${OPENIM_OUTPUT_HOSTBIN}/openim-msgtransfer")' exited with status 1
+Call stack:
+  1: ./install/openim-msgtransfer.sh:64 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 16:55:13] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 16:55:13] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 16:55:13] [0m==>  All specified services were stopped.
++++ [0316 16:55:13] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 16:55:13] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 16:55:13 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 16:55:13 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0001f4900, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0001f4900?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0001f4900, {0xc00018c060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0001f4900)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0001a84c8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 16:55:13 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 16:55:13 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000443800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000443800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000443800, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000443800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000120f8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000227800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000227800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000227800, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000227800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00012e630)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 226 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0000a7400, {0x16b83a0, 0xc0003d2e00})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:104 +0x21d
+panic: dial tcp 172.28.0.1:19094: connect: connection refused
+
+goroutine 227 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc0004cb4c0, {0x16b8370, 0xc0004f8ab0})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:105 +0x2b2
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 160599, Port: N/A, Start time: Mon Mar 16 16:55:12 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 160609, Port: N/A, Start time: 
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 160617, Port: N/A, Start time: 
+[32m[success 0316 16:55:13] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 155378, FD: 8, Started: Mon Mar 16 16:53:39 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 16:55:31] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+!!! [0316 16:55:31] Call tree:
+!!! [0316 16:55:31]  1: ./install/openim-msgtransfer.sh:145 openim::msgtransfer::check(...)
+!!! [0316 16:55:31]  2: ./check-all.sh:83 source(...)
+[31m!!! Error in ./install/openim-msgtransfer.sh:64 [0m
+  Error in ./install/openim-msgtransfer.sh:64. 'PIDS=$(pgrep -f "${OPENIM_OUTPUT_HOSTBIN}/openim-msgtransfer")' exited with status 1
+Call stack:
+  1: ./install/openim-msgtransfer.sh:64 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 16:57:19] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 16:57:19] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 16:57:19] [0m==>  All specified services were stopped.
++++ [0316 16:57:19] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 16:57:19] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 16:57:19 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 16:57:19 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 16:57:19 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0005d2300, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0005d2300?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0005d2300, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0005d2300)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0005365a8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0002a8f00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0002a8f00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0002a8f00, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0002a8f00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012088)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 16:57:19 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00045db00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00045db00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00045db00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00045db00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012128)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 166274, Port: N/A, Start time: Mon Mar 16 16:57:18 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 166283, Port: N/A, Start time: 
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 166294, Port: N/A, Start time: 
+[32m[success 0316 16:57:19] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 163516, FD: 8, Started: Mon Mar 16 16:56:49 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 16:57:55] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+[31m!!! Error in ./install/openim-msgtransfer.sh:75 [0m
+  Expected 4 openim msgtransfer processes, but found 1 msgtransfer processes.
+Call stack:
+  1: ./install/openim-msgtransfer.sh:75 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+panic: kafka: client has run out of available brokers to talk to: read tcp 127.0.0.1:47232->127.0.0.1:19094: read: connection reset by peer
+
+goroutine 229 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/kafka.(*MConsumerGroup).RegisterHandleAndConsumer(0xc000614100, {0x16b8370, 0xc0005240d8})
+	/www/wwwroot/openIm/server/pkg/common/kafka/consumer_group.go:72 +0x145
+created by github.com/openimsdk/open-im-server/v3/internal/msgtransfer.(*MsgTransfer).Start
+	/www/wwwroot/openIm/server/internal/msgtransfer/init.go:105 +0x2b2
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 17:02:15] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 17:02:15] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 17:02:15] [0m==>  All specified services were stopped.
++++ [0316 17:02:15] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 17:02:15] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 17:02:15 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 17:02:15 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:02:15 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/notification.yaml
+use config /www/wwwroot/openIm/server/config/config.yaml
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0000a1500, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0000a1500?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0000a1500, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0000a1500)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012070)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0001a6c00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0001a6c00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0001a6c00, {0xc000214060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0001a6c00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0001a2380)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 17:02:15 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00021f800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00021f800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00021f800, {0xc000100060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00021f800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012060)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 173428, Port: N/A, Start time: Mon Mar 16 17:02:14 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 173448, Port: N/A, Start time: 
+[32m[success 0316 17:02:16] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:02:47] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+[31m!!! Error in ./install/openim-msgtransfer.sh:75 [0m
+  Expected 4 openim msgtransfer processes, but found 1 msgtransfer processes.
+Call stack:
+  1: ./install/openim-msgtransfer.sh:75 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:06:22] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+[31m!!! Error in ./install/openim-msgtransfer.sh:75 [0m
+  Expected 4 openim msgtransfer processes, but found 1 msgtransfer processes.
+Call stack:
+  1: ./install/openim-msgtransfer.sh:75 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 17:07:52] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 17:07:52] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 17:07:52] [0m==>  All specified services were stopped.
++++ [0316 17:07:52] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 17:07:52] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 17:07:52 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 17:07:52 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000183b00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000183b00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000183b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000183b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0004bc9a0)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 17:07:52 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:07:52 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000182900, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000182900?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000182900, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000182900)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012500)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000227800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000227800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000227800, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000227800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012380)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 175200, Port: N/A, Start time: Mon Mar 16 17:07:51 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 175203, Port: N/A, Start time: 
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 175212, Port: N/A, Start time: 
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 175217, Port: N/A, Start time: 
+[32m[success 0316 17:07:52] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:08:04] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+[31m!!! Error in ./install/openim-msgtransfer.sh:75 [0m
+  Expected 4 openim msgtransfer processes, but found 1 msgtransfer processes.
+Call stack:
+  1: ./install/openim-msgtransfer.sh:75 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 17:09:12] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 17:09:12] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 17:09:12] [0m==>  All specified services were stopped.
++++ [0316 17:09:12] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 17:09:12] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 17:09:12 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:09:12 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000444f00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000444f00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000444f00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000444f00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000122e8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00015d800, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00015d800?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00015d800, {0xc0001a2010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00015d800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012068)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+2026/03/16 17:09:12 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:09:12 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00020a900, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00020a900?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00020a900, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00020a900)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00012a350)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 176360, Port: N/A, Start time: Mon Mar 16 17:09:12 2026
+[32m[success 0316 17:09:13] [0m==>  All processes are running.
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 17:18:53] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 17:18:53] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 17:18:53] [0m==>  All specified services were stopped.
++++ [0316 17:18:53] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 17:18:53] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 17:18:53 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:18:53 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 17:18:53 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 17:18:53 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+use config /www/wwwroot/openIm/server/config/config.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc00041e300, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc00041e300?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc00041e300, {0xc000180060, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc00041e300)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000548088)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0000a3500, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0000a3500?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0000a3500, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0000a3500)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000123d8)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16b1ec0?, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004d7b00, {0x1435f44, 0xf})
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004d7b00?, {0x1421e35?, 0x4?, 0x4?})
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004d7b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004d7b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/www/wwwroot/openIm/server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000518308)
+	/www/wwwroot/openIm/server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msgtransfer/main.go:25 +0xbb
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 177034, Port: N/A, Start time: Mon Mar 16 17:18:52 2026
+[32m[success 0316 17:18:53] [0m==>  All processes are running.
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:19:04] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+[31m!!! Error in ./install/openim-msgtransfer.sh:75 [0m
+  Expected 4 openim msgtransfer processes, but found 1 msgtransfer processes.
+Call stack:
+  1: ./install/openim-msgtransfer.sh:75 openim::msgtransfer::check(...)
+  2: ./install/openim-msgtransfer.sh:145 source(...)
+  3: ./check-all.sh:83 main(...)
+Exiting with status 1
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0316 17:20:40] Start OpenIM Msggateway, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0316 17:20:40] Failed to stop the /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0316 17:20:40] [0m==>  All specified services were stopped.
++++ [0316 17:20:40] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0316 17:20:40] OpenIM Msggateway config path: /www/wwwroot/openIm/server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2026/03/16 17:20:40 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+2026/03/16 17:20:40 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+2026/03/16 17:20:40 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2026/03/16 17:20:40 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+start msg transfer prometheusPort: 20200
+msg transfer not start mysql consumer
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+start msg transfer prometheusPort: 20202
+msg transfer not start mysql consumer
+start msg transfer prometheusPort: 20201
+msg transfer not start mysql consumer
+Started processes:
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 0, PID: 178159, Port: N/A, Start time: Mon Mar 16 17:20:39 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 1, PID: 178162, Port: N/A, Start time: Mon Mar 16 17:20:39 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 2, PID: 178168, Port: N/A, Start time: Mon Mar 16 17:20:39 2026
+Process /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /www/wwwroot/openIm/server/config/ -n 3, PID: 178176, Port: N/A, Start time: Mon Mar 16 17:20:39 2026
+[32m[success 0316 17:20:40] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:20:53] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+Found 4 processes named /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64
+
+## Check all OpenIM service ports
+Checking ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+
+### Not started ports:
+!!! [0316 17:20:53] Port 10110 is not started.
+!!! [0316 17:20:53] Port 10170 is not started.
+
+### Started ports:
+Port 10120 - Command: openim-rpc-frie, PID: 135565, FD: 3, Started: Mon Mar 16 16:42:19 2026
+Port 10130 - Command: openim-rpc-msg, PID: 135654, FD: 3, Started: Mon Mar 16 16:42:21 2026
+Port 10140 - Command: openim-msggatew, PID: 137845, FD: 3, Started: Mon Mar 16 16:42:41 2026
+Port 10150 - Command: openim-rpc-grou, PID: 135740, FD: 3, Started: Mon Mar 16 16:42:24 2026
+Port 10160 - Command: openim-rpc-auth, PID: 135814, FD: 3, Started: Mon Mar 16 16:42:26 2026
+Port 10180 - Command: openim-rpc-conv, PID: 135895, FD: 3, Started: Mon Mar 16 16:42:28 2026
+Port 10190 - Command: openim-rpc-thir, PID: 135968, FD: 3, Started: Mon Mar 16 16:42:30 2026
+Port 10002 - Command: openim-api, PID: 134942, FD: 10, Started: Mon Mar 16 16:42:15 2026
+Port 10001 - Command: openim-msggatew, PID: 137845, FD: 7, Started: Mon Mar 16 16:42:41 2026
+[31m!!! Error in ./check-all.sh:87 [0m
+  Error in ./check-all.sh:87. 'return 1' exited with status 1
+Call stack:
+  1: ./check-all.sh:87 main(...)
+Exiting with status 1
+[31m!!! Error in ./install/openim-rpc.sh:265 [0m
+  Error in ./install/openim-rpc.sh:265. 'openim::rpc::user::start' exited with status 127
+Call stack:
+  1: ./install/openim-rpc.sh:265 main(...)
+Exiting with status 1
++++ [0316 17:23:14] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push
++++ [0316 17:23:14] prepare start push process, path: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push
++++ [0316 17:23:14] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0316 17:23:14] Failed to stop the openim-push service.
+[32m[success 0316 17:23:14] [0m==>  All specified services were stopped.
++++ [0316 17:23:14] push port list: 10170
++++ [0316 17:23:14] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2026/03/16 17:23:15 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash ./install/openim-push.sh openim::push::start, PID: 179729, Port: N/A, Start time: Mon Mar 16 17:23:13 2026
+Process openim-push - Command: /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /www/wwwroot/openIm/server/config/ --prometheus_port 20170, PID: 180196, Port: 10170, Start time: Mon Mar 16 17:23:14 2026
+Process openim-push - Command: , PID: 180199, Port: N/A, Start time: 
+[32m[success 0316 17:23:15] [0m==>  All processes are running.
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:23:18] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+Found 4 processes named /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64
+
+## Check all OpenIM service ports
+Checking ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+
+### Not started ports:
+!!! [0316 17:23:19] Port 10110 is not started.
+
+### Started ports:
+Port 10120 - Command: openim-rpc-frie, PID: 135565, FD: 3, Started: Mon Mar 16 16:42:19 2026
+Port 10130 - Command: openim-rpc-msg, PID: 135654, FD: 3, Started: Mon Mar 16 16:42:21 2026
+Port 10140 - Command: openim-msggatew, PID: 137845, FD: 3, Started: Mon Mar 16 16:42:41 2026
+Port 10150 - Command: openim-rpc-grou, PID: 135740, FD: 3, Started: Mon Mar 16 16:42:24 2026
+Port 10160 - Command: openim-rpc-auth, PID: 135814, FD: 3, Started: Mon Mar 16 16:42:26 2026
+Port 10170 - Command: openim-push, PID: 180196, FD: 3, Started: Mon Mar 16 17:23:14 2026
+Port 10180 - Command: openim-rpc-conv, PID: 135895, FD: 3, Started: Mon Mar 16 16:42:28 2026
+Port 10190 - Command: openim-rpc-thir, PID: 135968, FD: 3, Started: Mon Mar 16 16:42:30 2026
+Port 10002 - Command: openim-api, PID: 134942, FD: 10, Started: Mon Mar 16 16:42:15 2026
+Port 10001 - Command: openim-msggatew, PID: 137845, FD: 7, Started: Mon Mar 16 16:42:41 2026
+[31m!!! Error in ./check-all.sh:87 [0m
+  Error in ./check-all.sh:87. 'return 1' exited with status 1
+Call stack:
+  1: ./check-all.sh:87 main(...)
+Exiting with status 1
+nohup: ignoring input
+2026/03/16 17:24:24 maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined
+configFolderPath: /www/wwwroot/openIm/server/config/
+use config /www/wwwroot/openIm/server/config/config.yaml
+use config /www/wwwroot/openIm/server/config/notification.yaml
+PortFromConfig: port
+PortFromConfig: prometheus_port
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+
+# Begin to check all openim service
+
+## Check all dependent service ports
+Checking ports: 16379 12181 19094 37017 10005
+
+### Started ports:
+Port 16379 - Command: docker-proxy, PID: 90129, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 12181 - Command: docker-proxy, PID: 89926, FD: 8, Started: Mon Mar 16 16:22:06 2026
+Port 19094 - Command: docker-proxy, PID: 171309, FD: 8, Started: Mon Mar 16 17:01:35 2026
+Port 37017 - Command: docker-proxy, PID: 90180, FD: 8, Started: Mon Mar 16 16:22:07 2026
+Port 10005 - Command: docker-proxy, PID: 89959, FD: 8, Started: Mon Mar 16 16:22:06 2026
+[32m[success 0316 17:25:01] [0m==>  All specified processes are running.
+
+## Check OpenIM service name
+Found 4 processes named /www/wwwroot/openIm/server/_output/bin/platforms/linux/amd64
+
+## Check all OpenIM service ports
+Checking ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 181055, FD: 3, Started: Mon Mar 16 17:24:23 2026
+Port 10120 - Command: openim-rpc-frie, PID: 135565, FD: 3, Started: Mon Mar 16 16:42:19 2026
+Port 10130 - Command: openim-rpc-msg, PID: 135654, FD: 3, Started: Mon Mar 16 16:42:21 2026
+Port 10140 - Command: openim-msggatew, PID: 137845, FD: 3, Started: Mon Mar 16 16:42:41 2026
+Port 10150 - Command: openim-rpc-grou, PID: 135740, FD: 3, Started: Mon Mar 16 16:42:24 2026
+Port 10160 - Command: openim-rpc-auth, PID: 135814, FD: 3, Started: Mon Mar 16 16:42:26 2026
+Port 10170 - Command: openim-push, PID: 180196, FD: 3, Started: Mon Mar 16 17:23:14 2026
+Port 10180 - Command: openim-rpc-conv, PID: 135895, FD: 3, Started: Mon Mar 16 16:42:28 2026
+Port 10190 - Command: openim-rpc-thir, PID: 135968, FD: 3, Started: Mon Mar 16 16:42:30 2026
+Port 10002 - Command: openim-api, PID: 134942, FD: 10, Started: Mon Mar 16 16:42:15 2026
+Port 10001 - Command: openim-msggatew, PID: 137845, FD: 7, Started: Mon Mar 16 16:42:41 2026
+[32m[success 0316 17:25:01] [0m==>  All specified processes are running.
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-friend/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-msg/main.go:31 +0x114
+Error: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+      --prometheus_port int         server prometheus listen port
+  -w, --ws_port int                 ws server listen port
+
+panic: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-msggateway/main.go:28 +0xf6
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-group/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-auth/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-conversation/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-third/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/www/wwwroot/openIm/server/cmd/openim-rpc/openim-rpc-encryption/main.go:31 +0x114

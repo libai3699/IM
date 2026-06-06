@@ -1,93 +1,186 @@
-# chart
+# openim-chat
 
+## 📄 License Options for OpenIM Source Code
 
+You may use the OpenIM source code to create compiled versions not originally produced by OpenIM under one of the following two licensing options:
 
-## Getting started
+### 1. GNU General Public License v3.0 (GPLv3) 🆓
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
++ This option is governed by the Free Software Foundation's [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html).
++ Usage is subject to certain exceptions as outlined in this policy.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+### 2. Commercial License 💼
 
-## Add your files
++ Obtain a commercial license by contacting OpenIM.
++ For more details and licensing inquiries, please email 📧 [contact@openim.io](mailto:contact@openim.io).
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+## 🧩 Awesome features
+1. This repository implement a business system, which consists of two parts: User related function and background management function
+2. The business system depends on the api of the im system ([open-im-server repository](https://github.com/openimsdk/open-im-server)) and implement various functions by calling the api of the im system
+3. User related part includes some regular functions like user login, user register, user info update, etc.
+4. Background management provides api for admin to manage the im system containing functions like user management, message mangement,group management,etc.
 
+## 🛫 Quick start 
+
+> **Note**: You can get started quickly with OpenIM Chat.
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/openimsdk/chat openim-chat && export openim-chat=$(pwd)/openim-chat && cd $openim-chat && make
 ```
-cd existing_repo
-git remote add origin http://gitlab.imtest88.com/openim/chart.git
-git branch -M main
-git push -uf origin main
+
+### Developing chat
+
+You can deploy OpenIM Chat in two ways, either from source (which requires openIM-server to be installed) or with [docker compose](https://github.com/openimsdk/openim-docker)
+
+**Here's how to deploy from source code:**
+
+If you wish to deploy chat, then you should first install and deploy OpenIM, this [open-im-server repository](https://github.com/openimsdk/open-im-server)
+
+First, install openim-server in a new directory or location repository
+
+```bash
+git clone -b release-v3.4 https://github.com/OpenIMSDK/Open-IM-Server.git openim && export openim=$(pwd)/openim && cd $openim
+sudo docker compose up -d
 ```
 
-## Integrate with your tools
+**Setting configuration items:**
 
-- [ ] [Set up project integrations](http://gitlab.imtest88.com/openim/chart/-/settings/integrations)
+```bash
+make init
+```
 
-## Collaborate with your team
+> Then modify the configuration file `config/config.yaml` according to your needs
+> Note: If you want to use the mysql database, you need to modify the mysql configuration item in the configuration file. If you want to use the mongo database, you need to modify the mongo configuration item in the configuration file
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
 
-## Test and Deploy
+Then go back to the chat directory, Installing Chat
 
-Use the built-in continuous integration in GitLab.
+**Start Mysql:**
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+> The newer versions of OpenIM remove the Mysql component, which requires an additional Mysql installation if you want to deploy chat
 
-***
+```bash
+docker run -d \
+  --name mysql4 \
+  -p 13306:3306 \
+  -p 3306:33060 \
+  -v "$(pwd)/components/mysql/data:/var/lib/mysql" \
+  -v "/etc/localtime:/etc/localtime" \
+  -e MYSQL_ROOT_PASSWORD="openIM123" \
+  --restart always \
+  mysql:5.7
+```
 
-# Editing this README
+**Install Chat:**
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+```bash
+$ make build
+$ make start
+$ make check
+```
 
-## Suggestions for a good README
+## 🛫 Quick start 
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+> **Note**: You can get started quickly with chat.
 
-## Name
-Choose a self-explaining name for your project.
+### 🚀 Run
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+> **Note**: 
+> We need to run the backend server first
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
+```bash
+$ make build
 
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
+# OR build Specifying binary
+$ make build BINS=admin-api
 
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
+# OR build multiarch
+$ make build-multiarch
+$ make build-multiarch BINS="admin-api"
 
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
+# OR use scripts build source code
+$ ./scripts/build_all.sh
+```
 
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
+### 📖 Contributors get up to speed
 
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+Be good at using Makefile, it can ensure the quality of your project.
+
+```bash
+Usage: make <TARGETS> ...
+
+Targets:
+  all                          Build all the necessary targets. 🏗️
+  build                        Build binaries by default. 🛠️
+  go.build                     Build the binary file of the specified platform. 👨‍💻
+  build-multiarch              Build binaries for multiple platforms. 🌍
+  tidy                         tidy go.mod 📦
+  style                        Code style -> fmt,vet,lint 🎨
+  fmt                          Run go fmt against code. ✨
+  vet                          Run go vet against code. 🔍
+  generate                     Run go generate against code and docs. ✅
+  lint                         Run go lint against code. 🔎
+  test                         Run unit test ✔️
+  cover                        Run unit test with coverage. 🧪
+  docker-build                 Build docker image with the manager. 🐳
+  docker-push                  Push docker image with the manager. 🔝
+  docker-buildx-push           Push docker image with the manager using buildx. 🚢
+  copyright-verify             Validate boilerplate headers for assign files. 📄
+  copyright-add                Add the boilerplate headers for all files. 📝
+  swagger                      Generate swagger document. 📚
+  serve-swagger                Serve swagger spec and docs. 🌐
+  clean                        Clean all builds. 🧹
+  help                         Show this help info. ℹ️
+```
+
+> **Note**: 
+> It's highly recommended that you run `make all` before committing your code. 🚀
+
+```bash
+$ make all
+```
+
+### Chat Start
+
+```bash
+$ make start_all
+# OR use scripts start
+$ ./scripts/start_all.sh
+```
+
+### Chat Detection
+
+```bash
+$ make check
+# OR use scripts check
+$ ./scripts/check_all.sh --print-screen
+```
+
+### Chat Stop
+
+```bash
+$ make stop
+# OR use scripts stop
+$ ./scripts/stop_all.sh
+```
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Contributions to this project are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for details.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Community Meetings
+We want anyone to get involved in our community, we offer gifts and rewards, and we welcome you to join us every Thursday night.
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
+We take notes of each [biweekly meeting](https://github.com/openimsdk/open-im-server/issues/381) in [GitHub discussions](https://github.com/openimsdk/open-im-server/discussions/categories/meeting), and our minutes are written in [Google Docs](https://docs.google.com/document/d/1nx8MDpuG74NASx081JcCpxPgDITNTpIIos0DS6Vr9GU/edit?usp=sharing).
 
-## License
-For open source projects, say how it is licensed.
 
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+## Who are using open-im-server
+The [user case studies](https://github.com/openimsdk/community/blob/main/ADOPTERS.md) page includes the user list of the project. You can leave a [📝comment](https://github.com/openimsdk/open-im-server/issues/379) to let us know your use case.
+
+![avatar](https://github.com/openimsdk/OpenIM-Docs/blob/main/docs/images/WechatIMG20.jpeg)
+
+## 🚨 License
+
+chat is licensed under the  Apache 2.0 license. See [LICENSE](https://github.com/openimsdk/chat/tree/main/LICENSE) for the full license text.

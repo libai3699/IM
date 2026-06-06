@@ -1,0 +1,6 @@
+2025/06/11 07:03:01 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0

@@ -1,0 +1,2718 @@
+Skipping generation of /opt/openim/open-im-server/config/config.yaml.
+Skipping generation of /opt/openim/open-im-server/.env.
+Skipping generation of /opt/openim/open-im-server/config/prometheus.yml.
+Skipping generation of /opt/openim/open-im-server/config/alertmanager.yml.
+Skipping generation of /opt/openim/open-im-server/config/instance-down-rules.yml.
+Skipping generation of /opt/openim/open-im-server/config/notification.yaml.
+Skipping generation of /opt/openim/open-im-server/config/email.tmpl.
+[32m[success 0611 06:40:14] [0m==>  Configuration and example files operation complete!
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 06:51:16] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 06:51:17] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 06:51:17 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Error: zk: invalid path
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+
+panic: zk: invalid path
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-api/main.go:48 +0x10d
+Checking ports: 10002
+
+### Not started ports:
+!!! [0611 06:51:19] Port 10002 is not started.
+!!! [0611 06:51:19] Call tree:
+!!! [0611 06:51:19]  1: /opt/openim/open-im-server/scripts/install/openim-api.sh:159 openim::api::start(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/install/openim-api.sh:74 [0m
+  Error in /opt/openim/open-im-server/scripts/install/openim-api.sh:74. 'return 1' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/install/openim-api.sh:74 openim::api::start(...)
+  2: /opt/openim/open-im-server/scripts/install/openim-api.sh:159 main(...)
+Exiting with status 1
+!!! [0611 06:51:19] Call tree:
+!!! [0611 06:51:19]  1: /opt/openim/open-im-server/scripts/start-all.sh:78 execute_scripts(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/start-all.sh:55 [0m
+  Error in /opt/openim/open-im-server/scripts/start-all.sh:55. '"$script_path" "$arg"' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/start-all.sh:55 execute_scripts(...)
+  2: /opt/openim/open-im-server/scripts/start-all.sh:78 main(...)
+Exiting with status 1
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 06:53:22] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 06:53:22] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 06:53:22 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Error: zk: invalid path
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+
+panic: zk: invalid path
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-api/main.go:48 +0x10d
+Checking ports: 10002
+
+### Not started ports:
+!!! [0611 06:53:24] Port 10002 is not started.
+!!! [0611 06:53:24] Call tree:
+!!! [0611 06:53:24]  1: /opt/openim/open-im-server/scripts/install/openim-api.sh:159 openim::api::start(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/install/openim-api.sh:74 [0m
+  Error in /opt/openim/open-im-server/scripts/install/openim-api.sh:74. 'return 1' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/install/openim-api.sh:74 openim::api::start(...)
+  2: /opt/openim/open-im-server/scripts/install/openim-api.sh:159 main(...)
+Exiting with status 1
+!!! [0611 06:53:24] Call tree:
+!!! [0611 06:53:24]  1: /opt/openim/open-im-server/scripts/start-all.sh:78 execute_scripts(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/start-all.sh:55 [0m
+  Error in /opt/openim/open-im-server/scripts/start-all.sh:55. '"$script_path" "$arg"' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/start-all.sh:55 execute_scripts(...)
+  2: /opt/openim/open-im-server/scripts/start-all.sh:78 main(...)
+Exiting with status 1
+
+# Begin to stop all openim service
+Stopping services on ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+Stopped services on ports:
+Successfully stopped service on port 10120.
+Successfully stopped service on port 10130.
+Successfully stopped service on port 10140.
+Successfully stopped service on port 10150.
+Successfully stopped service on port 10160.
+Successfully stopped service on port 10170.
+Successfully stopped service on port 10180.
+Successfully stopped service on port 10190.
+[32m[success 0611 08:15:32] [0m==>  All specified services were stopped.
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64
+Stopped services:
+Successfully stopped the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64 service.
+[32m[success 0611 08:15:32] [0m==>  All specified services were stopped.
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+!!! [0611 08:15:43] Call tree:
+!!! [0611 08:15:43]  1: /opt/openim/open-im-server/scripts/install//openim-tools.sh:124 openim::tools::start_service(...)
+!!! [0611 08:15:43]  2: /opt/openim/open-im-server/scripts/install//openim-tools.sh:167 openim::tools::pre-start(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/install//openim-tools.sh:107 [0m
+  Error in /opt/openim/open-im-server/scripts/install//openim-tools.sh:107. '${cmd}' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/install//openim-tools.sh:107 openim::tools::start_service(...)
+  2: /opt/openim/open-im-server/scripts/install//openim-tools.sh:124 openim::tools::pre-start(...)
+  3: /opt/openim/open-im-server/scripts/install//openim-tools.sh:167 main(...)
+Exiting with status 1
+[31m!!! Error in start-all.sh:75 [0m
+  Error in start-all.sh:75. '${TOOLS_START_SCRIPTS_PATH} openim::tools::pre-start' exited with status 1
+Call stack:
+  1: start-all.sh:75 main(...)
+Exiting with status 1
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 08:18:02] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 08:18:02] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 08:18:02 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 599158, FD: 11, Started: Wed Jun 11 08:18:02 2025
+[32m[success 0611 08:18:04] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 08:18:04] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 08:18:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 08:18:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 08:18:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 08:18:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+[32m[success 0611 08:18:06] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 08:18:06 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+[32m[success 0611 08:18:06] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 08:18:06 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 08:18:06] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 08:18:06 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+[32m[success 0611 08:18:06] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 08:18:06 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+[32m[success 0611 08:18:06] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 08:18:06 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+[32m[success 0611 08:18:07] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 08:18:07 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 599999, FD: 3, Started: Wed Jun 11 08:18:04 2025
+Port 10120 - Command: openim-rpc-frie, PID: 600043, FD: 3, Started: Wed Jun 11 08:18:05 2025
+Port 10130 - Command: openim-rpc-msg, PID: 600122, FD: 3, Started: Wed Jun 11 08:18:05 2025
+Port 10150 - Command: openim-rpc-grou, PID: 600217, FD: 3, Started: Wed Jun 11 08:18:05 2025
+Port 10160 - Command: openim-rpc-auth, PID: 600259, FD: 3, Started: Wed Jun 11 08:18:05 2025
+Port 10180 - Command: openim-rpc-conv, PID: 600294, FD: 3, Started: Wed Jun 11 08:18:05 2025
+Port 10190 - Command: openim-rpc-thir, PID: 600333, FD: 3, Started: Wed Jun 11 08:18:06 2025
+Port 10200 - Command: openim-rpc-encr, PID: 600387, FD: 3, Started: Wed Jun 11 08:18:06 2025
+[32m[success 0611 08:18:08] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 08:18:08] Starting script: openim-push.sh
++++ [0611 08:18:09] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 08:18:09] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 08:18:09] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 08:18:09] Failed to stop the openim-push service.
+[32m[success 0611 08:18:09] [0m==>  All specified services were stopped.
++++ [0611 08:18:09] push port list: 10170
++++ [0611 08:18:09] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 08:18:09 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 600742, Port: N/A, Start time: Wed Jun 11 08:18:07 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 601308, Port: 20170
+10170, Start time: Wed Jun 11 08:18:08 2025
+Process openim-push - Command: , PID: 601311, Port: N/A, Start time: 
+[32m[success 0611 08:18:09] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 08:18:09] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 08:18:10] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 08:18:10] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 08:18:10] [0m==>  All specified services were stopped.
++++ [0611 08:18:10] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 08:18:10] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 08:18:10 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+2025/06/11 08:18:10 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2025/06/11 08:18:10 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+2025/06/11 08:18:10 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0005bb500, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0005bb500?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0005bb500, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0005bb500)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012468)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000005b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000005b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +panic: 0x862
+runtime error: index out of range [3] with length 1github.com/spf13/cobra.(*Command).ExecuteC
+(
+0xc000005b00goroutine )
+1	 [/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.gorunning:]:
+1068github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig +(0x3bd
+github.com/spf13/cobra.(*Command).Execute0x16a28a0(...)
+?	, /root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go{:0x1451cc8992, 
+0xfgithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute}(...)
+)
+		/opt/openim/open-im-server/pkg/common/cmd/root.go/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go::17255
+ +github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec0x118(
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0000124880xc000229b00)
+, 	{/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go0x1451cc8:, 460xf +}0x2d)
+
+	/opt/openim/open-im-server/pkg/common/cmd/root.gomain.main:(185)
+ +	0xad/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go
+:25 +github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag0xbb(
+0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000229b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000229b00, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000229b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00034c310)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 601912, Port: N/A, Start time: Wed Jun 11 08:18:09 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 601922, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 601929, Port: N/A, Start time: 
+[32m[success 0611 08:18:10] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 08:18:10] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 08:18:11] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 08:18:11] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 08:18:11] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 08:18:11] [0m==>  All specified services were stopped.
++++ [0611 08:18:11] OpenIM Mssage Getway ports: 10140
++++ [0611 08:18:11] OpenIM WS ports: 10001
++++ [0611 08:18:11] OpenIM Prometheus ports: 20140
++++ [0611 08:18:11] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 08:18:11 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 602040, Port: N/A, Start time: Wed Jun 11 08:18:09 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 602646, Port: 20140
+10001
+10140, Start time: Wed Jun 11 08:18:10 2025
+Process openim-msggateway - Command: , PID: 602649, Port: N/A, Start time: 
+[32m[success 0611 08:18:11] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 08:18:11] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 08:18:12] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 08:18:12] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 08:18:12] [0m==>  All specified services were stopped.
++++ [0611 08:18:12] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 08:18:12 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 602751, Port: N/A, Start time: Wed Jun 11 08:18:10 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 603307, Port: N/A, Start time: Wed Jun 11 08:18:11 2025
+Process openim-crontask - Command: , PID: 603310, Port: N/A, Start time: 
+[32m[success 0611 08:18:12] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 08:18:12] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 08:18:14] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to stop all openim service
+Stopping services on ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+Stopped services on ports:
+Successfully stopped service on port 10110.
+Successfully stopped service on port 10120.
+Successfully stopped service on port 10130.
+Successfully stopped service on port 10140.
+Successfully stopped service on port 10150.
+Successfully stopped service on port 10160.
+Successfully stopped service on port 10170.
+Successfully stopped service on port 10180.
+Successfully stopped service on port 10190.
+Successfully stopped service on port 10002.
+[32m[success 0611 08:26:27] [0m==>  All specified services were stopped.
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64
+Stopped services:
+Successfully stopped the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64 service.
+[32m[success 0611 08:26:27] [0m==>  All specified services were stopped.
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 08:26:36] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 08:26:36] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 08:26:36 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 655985, FD: 11, Started: Wed Jun 11 08:26:36 2025
+[32m[success 0611 08:26:38] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 08:26:39] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 08:26:39] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 08:26:39 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+2025/06/11 08:26:39 Unable to start a http server.
+[32m[success 0611 08:26:39] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 08:26:39 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+2025/06/11 08:26:40 Unable to start a http server.
+[32m[success 0611 08:26:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 08:26:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+2025/06/11 08:26:40 Unable to start a http server.
+[32m[success 0611 08:26:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 08:26:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+2025/06/11 08:26:40 Unable to start a http server.
+[32m[success 0611 08:26:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 08:26:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+2025/06/11 08:26:40 Unable to start a http server.
+[32m[success 0611 08:26:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 08:26:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-user/main.go:31 +0x114
+2025/06/11 08:26:40 Unable to start a http server.
+[32m[success 0611 08:26:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 08:26:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-friend/main.go:31 +0x114
+2025/06/11 08:26:41 Unable to start a http server.
+[32m[success 0611 08:26:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 08:26:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-msg/main.go:31 +0x114
+2025/06/11 08:26:41 Unable to start a http server.
+Error: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+      --prometheus_port int         server prometheus listen port
+  -w, --ws_port int                 ws server listen port
+
+panic: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msggateway/main.go:28 +0xf6
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-group/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-auth/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-push/main.go:31 +0x114
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-conversation/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-third/main.go:31 +0x114
+
+### Not started ports:
+!!! [0611 08:26:42] Port 10110 is not started.
+!!! [0611 08:26:42] Port 10120 is not started.
+!!! [0611 08:26:42] Port 10130 is not started.
+!!! [0611 08:26:42] Port 10150 is not started.
+!!! [0611 08:26:42] Port 10160 is not started.
+!!! [0611 08:26:42] Port 10180 is not started.
+!!! [0611 08:26:42] Port 10190 is not started.
+!!! [0611 08:26:42] Port 10200 is not started.
+!!! [0611 08:26:42] Call tree:
+!!! [0611 08:26:42]  1: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:245 openim::rpc::start(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147 [0m
+  Error in /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147. 'return 1' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147 openim::rpc::start(...)
+  2: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:245 main(...)
+Exiting with status 1
+!!! [0611 08:26:42] Call tree:
+!!! [0611 08:26:42]  1: ./scripts/start-all.sh:78 execute_scripts(...)
+[31m!!! Error in ./scripts/start-all.sh:55 [0m
+  Error in ./scripts/start-all.sh:55. '"$script_path" "$arg"' exited with status 1
+Call stack:
+  1: ./scripts/start-all.sh:55 execute_scripts(...)
+  2: ./scripts/start-all.sh:78 main(...)
+Exiting with status 1
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-encryption/main.go:31 +0x114
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 08:27:36] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+Stopped services on ports:
+Successfully stopped service on port 10002.
+[32m[success 0611 08:27:37] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+nohup: ignoring input
+2025/06/11 08:27:37 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 664353, FD: 11, Started: Wed Jun 11 08:27:36 2025
+[32m[success 0611 08:27:39] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 08:27:39] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 08:27:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 08:27:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 08:27:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 08:27:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+[32m[success 0611 08:27:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 08:27:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+[32m[success 0611 08:27:40] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 08:27:40 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 08:27:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 08:27:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+[32m[success 0611 08:27:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 08:27:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+[32m[success 0611 08:27:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 08:27:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+[32m[success 0611 08:27:41] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 08:27:41 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 665151, FD: 3, Started: Wed Jun 11 08:27:39 2025
+Port 10120 - Command: openim-rpc-frie, PID: 665193, FD: 3, Started: Wed Jun 11 08:27:39 2025
+Port 10130 - Command: openim-rpc-msg, PID: 665242, FD: 3, Started: Wed Jun 11 08:27:39 2025
+Port 10150 - Command: openim-rpc-grou, PID: 665291, FD: 3, Started: Wed Jun 11 08:27:40 2025
+Port 10160 - Command: openim-rpc-auth, PID: 665433, FD: 3, Started: Wed Jun 11 08:27:40 2025
+Port 10180 - Command: openim-rpc-conv, PID: 665492, FD: 3, Started: Wed Jun 11 08:27:40 2025
+Port 10190 - Command: openim-rpc-thir, PID: 665532, FD: 3, Started: Wed Jun 11 08:27:40 2025
+Port 10200 - Command: openim-rpc-encr, PID: 665632, FD: 3, Started: Wed Jun 11 08:27:40 2025
+[32m[success 0611 08:27:43] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 08:27:43] Starting script: openim-push.sh
++++ [0611 08:27:43] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 08:27:43] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 08:27:43] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 08:27:43] Failed to stop the openim-push service.
+[32m[success 0611 08:27:43] [0m==>  All specified services were stopped.
++++ [0611 08:27:43] push port list: 10170
++++ [0611 08:27:43] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 08:27:43 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 665938, Port: N/A, Start time: Wed Jun 11 08:27:42 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 666433, Port: 20170
+10170, Start time: Wed Jun 11 08:27:43 2025
+Process openim-push - Command: , PID: 666436, Port: N/A, Start time: 
+[32m[success 0611 08:27:44] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 08:27:44] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 08:27:44] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 08:27:44] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 08:27:44] [0m==>  All specified services were stopped.
++++ [0611 08:27:44] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 08:27:44] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 08:27:44 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+2025/06/11 08:27:44 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+use config /opt/openim/open-im-server/config/config.yaml
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2025/06/11 08:27:44 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004e1b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004e1b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004e1b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004e1b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00014e2f0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /opt/openim/open-im-server/config/config.yaml
+2025/06/11 08:27:44 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005200, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000005200?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000005200, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000005200)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000530308)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000227b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000227b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000227b00, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000227b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012390)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 667127, Port: N/A, Start time: Wed Jun 11 08:27:43 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 667130, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 667137, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 667144, Port: N/A, Start time: 
+[32m[success 0611 08:27:45] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 08:27:45] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 08:27:45] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 08:27:45] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 08:27:45] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 08:27:45] [0m==>  All specified services were stopped.
++++ [0611 08:27:45] OpenIM Mssage Getway ports: 10140
++++ [0611 08:27:45] OpenIM WS ports: 10001
++++ [0611 08:27:45] OpenIM Prometheus ports: 20140
++++ [0611 08:27:45] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 08:27:45 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 667327, Port: N/A, Start time: Wed Jun 11 08:27:44 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 667878, Port: 20140
+10001
+10140, Start time: Wed Jun 11 08:27:45 2025
+Process openim-msggateway - Command: , PID: 667881, Port: N/A, Start time: 
+[32m[success 0611 08:27:46] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 08:27:46] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 08:27:46] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 08:27:46] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 08:27:46] [0m==>  All specified services were stopped.
++++ [0611 08:27:46] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 08:27:46 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 667964, Port: N/A, Start time: Wed Jun 11 08:27:45 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 668477, Port: N/A, Start time: Wed Jun 11 08:27:45 2025
+Process openim-crontask - Command: , PID: 668480, Port: N/A, Start time: 
+[32m[success 0611 08:27:46] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 08:27:46] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 08:27:49] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to stop all openim service
+Stopping services on ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+Stopped services on ports:
+Successfully stopped service on port 10110.
+Successfully stopped service on port 10120.
+Successfully stopped service on port 10130.
+Successfully stopped service on port 10140.
+Successfully stopped service on port 10150.
+Successfully stopped service on port 10160.
+Successfully stopped service on port 10170.
+Successfully stopped service on port 10180.
+Successfully stopped service on port 10190.
+Successfully stopped service on port 10002.
+[32m[success 0611 21:43:50] [0m==>  All specified services were stopped.
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64
+Stopped services:
+Successfully stopped the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64 service.
+[32m[success 0611 21:43:50] [0m==>  All specified services were stopped.
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 21:44:11] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 21:44:11] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 21:44:11 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 3054941, FD: 10, Started: Wed Jun 11 21:44:10 2025
+[32m[success 0611 21:44:13] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 21:44:13] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 21:44:14 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 21:44:14 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+use config /opt/openim/open-im-server/config/config.yaml
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+2025/06/11 21:44:14 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+Stopping services on ports: 10180
+[32m[success 0611 21:44:14] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 21:44:15 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 21:44:15] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+[32m[success 0611 21:44:15] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 21:44:15 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+2025/06/11 21:44:15 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+2025/06/11 21:44:15 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+2025/06/11 21:44:15 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 3055565, FD: 3, Started: Wed Jun 11 21:44:13 2025
+Port 10120 - Command: openim-rpc-frie, PID: 3055614, FD: 3, Started: Wed Jun 11 21:44:13 2025
+Port 10130 - Command: openim-rpc-msg, PID: 3055653, FD: 3, Started: Wed Jun 11 21:44:13 2025
+Port 10150 - Command: openim-rpc-grou, PID: 3055692, FD: 3, Started: Wed Jun 11 21:44:13 2025
+Port 10160 - Command: openim-rpc-auth, PID: 3055758, FD: 3, Started: Wed Jun 11 21:44:14 2025
+Port 10180 - Command: openim-rpc-conv, PID: 3055788, FD: 3, Started: Wed Jun 11 21:44:14 2025
+Port 10190 - Command: openim-rpc-thir, PID: 3055828, FD: 3, Started: Wed Jun 11 21:44:14 2025
+Port 10200 - Command: openim-rpc-encr, PID: 3055853, FD: 3, Started: Wed Jun 11 21:44:14 2025
+[32m[success 0611 21:44:16] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 21:44:16] Starting script: openim-push.sh
++++ [0611 21:44:17] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:44:17] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:44:17] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 21:44:17] Failed to stop the openim-push service.
+[32m[success 0611 21:44:17] [0m==>  All specified services were stopped.
++++ [0611 21:44:17] push port list: 10170
++++ [0611 21:44:17] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 21:44:17 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 3056115, Port: N/A, Start time: Wed Jun 11 21:44:15 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 3056662, Port: N/A, Start time: Wed Jun 11 21:44:16 2025
+Process openim-push - Command: , PID: 3056665, Port: N/A, Start time: 
+[32m[success 0611 21:44:17] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 21:44:17] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 21:44:18] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 21:44:18] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 21:44:18] [0m==>  All specified services were stopped.
++++ [0611 21:44:18] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 21:44:18] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 21:44:18 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+2025/06/11 21:44:18 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+2025/06/11 21:44:18 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+configFolderPath: /opt/openim/open-im-server/config/
+configFolderPath: /opt/openim/open-im-server/config/
+2025/06/11 21:44:18 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+GetPortFromConfig: prometheus_port
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: panic: runtime error: index out of range [2] with length 1runtime error: index out of range [3] with length 1
+
+
+
+goroutine goroutine 11 [ [runningrunning]:
+]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfiggithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfigpanic: ((runtime error: index out of range [1] with length 1
+
+0x16a28a0goroutine ?1,  [{running0x1451cc8]:
+, 0xf0x16a28a0}?)
+, github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig	{0x1451cc8/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go(, :550xf +}0x118)
+
+0x16a28a0	github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go(:0xc0002a9b0055, ? +{0x1180x1451cc8, 
+, {0xfgithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig0x1451cc8}(, 0xc0005e7b00)
+, 0xf{	0x1451cc8}/opt/openim/open-im-server/pkg/common/cmd/root.go, )
+:0xf}	185)
+/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go +	/opt/openim/open-im-server/pkg/common/cmd/root.go:0xad:
+55185 + +0x1180xad
+
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlaggithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag((0x00x0??, , 0x00x0??github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag)
+)
+		(/opt/openim/open-im-server/pkg/common/cmd/root.go/opt/openim/open-im-server/pkg/common/cmd/root.go::0x0156156 + +?0x510x51
+
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1, ((0x00xc0002a9b000xc0005e7b00???, , )
+{{0x143db7c0x143db7c	??, , /opt/openim/open-im-server/pkg/common/cmd/root.go0x40x4??:, , 0x40x4156?? +}})
+0x51)
+	
+/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func140: +(400x26
+ +0xc000005b000x26?
+github.com/spf13/cobra.(*Command).execute, (github.com/spf13/cobra.(*Command).execute{0xc0005e7b00(, 0x143db7c0xc0002a9b00{?, 0xc00003e0b0, {, 0xc0001b40100x40x4, ?0x4, , 0x4, 0x4}0x4})
+?)
+		}/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go)
+::940	 +940/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go +0x8620x862
+:
+github.com/spf13/cobra.(*Command).ExecuteC40github.com/spf13/cobra.(*Command).ExecuteC(( +0xc0002a9b000xc0005e7b000x26)
+)
+		
+/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go::10681068 + +0x3bd0x3bdgithub.com/spf13/cobra.(*Command).execute
+
+(github.com/spf13/cobra.(*Command).Executegithub.com/spf13/cobra.(*Command).Execute(...)
+(...)
+0xc000005b00		/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go, ::{9929920xc00003e0b0
+
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute, github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+(...)
+0x4		/opt/openim/open-im-server/pkg/common/cmd/root.go/opt/openim/open-im-server/pkg/common/cmd/root.go, ::0x4172172
+
+}github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Execgithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec()
+(0xc000012380	0xc000628310)
+/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go)
+	:	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go940/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46: + +460x8620x2d +0x2d
+
+
+github.com/spf13/cobra.(*Command).ExecuteCmain.mainmain.main((()
+0xc000005b00)
+		)
+/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go	::/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go2525 +: +0xbb0xbb
+1068
+ +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000124e0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 3057232, Port: N/A, Start time: Wed Jun 11 21:44:17 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 1, PID: 3057235, Port: N/A, Start time: Wed Jun 11 21:44:17 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3057238, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3057241, Port: N/A, Start time: 
+[32m[success 0611 21:44:18] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 21:44:18] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 21:44:19] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 21:44:19] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 21:44:19] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 21:44:19] [0m==>  All specified services were stopped.
++++ [0611 21:44:19] OpenIM Mssage Getway ports: 10140
++++ [0611 21:44:19] OpenIM WS ports: 10001
++++ [0611 21:44:19] OpenIM Prometheus ports: 20140
++++ [0611 21:44:19] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 21:44:19 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 3057410, Port: N/A, Start time: Wed Jun 11 21:44:17 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 3057910, Port: N/A, Start time: Wed Jun 11 21:44:18 2025
+Process openim-msggateway - Command: , PID: 3057913, Port: N/A, Start time: 
+[32m[success 0611 21:44:19] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 21:44:19] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 21:44:20] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 21:44:20] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 21:44:20] [0m==>  All specified services were stopped.
++++ [0611 21:44:20] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 21:44:20 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 3058003, Port: N/A, Start time: Wed Jun 11 21:44:18 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 3058492, Port: N/A, Start time: Wed Jun 11 21:44:19 2025
+Process openim-crontask - Command: , PID: 3058495, Port: N/A, Start time: 
+[32m[success 0611 21:44:20] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 21:44:20] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 21:44:22] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 21:44:51] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 21:44:51] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 21:44:51 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 3062451, FD: 12, Started: Wed Jun 11 21:44:50 2025
+[32m[success 0611 21:44:53] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 21:44:53] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+[32m[success 0611 21:44:54] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 21:44:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+[32m[success 0611 21:44:55] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 21:44:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+[32m[success 0611 21:44:55] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 21:44:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 3063091, FD: 3, Started: Wed Jun 11 21:44:53 2025
+Port 10120 - Command: openim-rpc-frie, PID: 3063128, FD: 3, Started: Wed Jun 11 21:44:53 2025
+Port 10130 - Command: openim-rpc-msg, PID: 3063166, FD: 3, Started: Wed Jun 11 21:44:53 2025
+Port 10150 - Command: openim-rpc-grou, PID: 3063205, FD: 3, Started: Wed Jun 11 21:44:53 2025
+Port 10160 - Command: openim-rpc-auth, PID: 3063247, FD: 3, Started: Wed Jun 11 21:44:54 2025
+Port 10180 - Command: openim-rpc-conv, PID: 3063288, FD: 3, Started: Wed Jun 11 21:44:54 2025
+Port 10190 - Command: openim-rpc-thir, PID: 3063328, FD: 3, Started: Wed Jun 11 21:44:54 2025
+Port 10200 - Command: openim-rpc-encr, PID: 3063370, FD: 3, Started: Wed Jun 11 21:44:54 2025
+[32m[success 0611 21:44:56] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 21:44:56] Starting script: openim-push.sh
++++ [0611 21:44:57] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:44:57] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:44:57] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 21:44:57] Failed to stop the openim-push service.
+[32m[success 0611 21:44:57] [0m==>  All specified services were stopped.
++++ [0611 21:44:57] push port list: 10170
++++ [0611 21:44:57] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 21:44:57 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 3063687, Port: N/A, Start time: Wed Jun 11 21:44:55 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 3064154, Port: 20170
+10170, Start time: Wed Jun 11 21:44:56 2025
+Process openim-push - Command: , PID: 3064157, Port: N/A, Start time: 
+[32m[success 0611 21:44:57] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 21:44:57] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 21:44:58] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 21:44:58] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 21:44:58] [0m==>  All specified services were stopped.
++++ [0611 21:44:58] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 21:44:58] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 21:44:58 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+2025/06/11 21:44:58 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2025/06/11 21:44:58 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/config.yaml
+2025/06/11 21:44:58 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004f1800, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004f1800?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004f1800, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004f1800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0005982e8)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/config.yaml
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0005af800, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0005af800?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0005af800, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0005af800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00012e4b0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2dpanic: 
+runtime error: index out of range [3] with length 1main.main
+
+(goroutine )
+1	 [/opt/openim/open-im-server/cmd/openim-msgtransfer/main.gorunning:]:
+25 +0xbbgithub.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig
+(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004cbb00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004cbb00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004cbb00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004cbb00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000124b0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 3064727, Port: N/A, Start time: Wed Jun 11 21:44:57 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3064737, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3064744, Port: N/A, Start time: 
+[32m[success 0611 21:44:58] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 21:44:58] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 21:44:59] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 21:44:59] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 21:44:59] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 21:44:59] [0m==>  All specified services were stopped.
++++ [0611 21:44:59] OpenIM Mssage Getway ports: 10140
++++ [0611 21:44:59] OpenIM WS ports: 10001
++++ [0611 21:44:59] OpenIM Prometheus ports: 20140
++++ [0611 21:44:59] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 21:44:59 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 3064853, Port: N/A, Start time: Wed Jun 11 21:44:57 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 3065422, Port: 20140
+10001
+10140, Start time: Wed Jun 11 21:44:58 2025
+Process openim-msggateway - Command: , PID: 3065425, Port: N/A, Start time: 
+[32m[success 0611 21:44:59] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 21:44:59] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 21:45:00] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 21:45:00] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 21:45:00] [0m==>  All specified services were stopped.
++++ [0611 21:45:00] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 21:45:00 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 3065523, Port: N/A, Start time: Wed Jun 11 21:44:58 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 3065994, Port: N/A, Start time: Wed Jun 11 21:44:59 2025
+Process openim-crontask - Command: , PID: 3065999, Port: N/A, Start time: 
+[32m[success 0611 21:45:00] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 21:45:00] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 21:45:02] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 21:49:29] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+Stopped services on ports:
+Successfully stopped service on port 10002.
+[32m[success 0611 21:49:30] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+nohup: ignoring input
+2025/06/11 21:49:30 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 3082168, FD: 27, Started: Wed Jun 11 21:49:29 2025
+[32m[success 0611 21:49:32] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 21:49:32] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+Stopped services on ports:
+Successfully stopped service on port 10110.
+[32m[success 0611 21:49:33] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+nohup: ignoring input
+Stopping services on ports: 10120
+2025/06/11 21:49:33 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+2025/06/11 21:49:33 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10120.
+[32m[success 0611 21:49:33] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+nohup: ignoring input
+Stopping services on ports: 10130
+2025/06/11 21:49:33 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+2025/06/11 21:49:33 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10130.
+[32m[success 0611 21:49:33] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+nohup: ignoring input
+Stopping services on ports: 10150
+2025/06/11 21:49:33 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+2025/06/11 21:49:33 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10150.
+[32m[success 0611 21:49:33] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+nohup: ignoring input
+Stopping services on ports: 10160
+2025/06/11 21:49:33 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+2025/06/11 21:49:33 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10160.
+[32m[success 0611 21:49:34] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+nohup: ignoring input
+Stopping services on ports: 10180
+2025/06/11 21:49:34 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+2025/06/11 21:49:34 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10180.
+[32m[success 0611 21:49:34] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+nohup: ignoring input
+Stopping services on ports: 10190
+2025/06/11 21:49:34 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+2025/06/11 21:49:34 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10190.
+[32m[success 0611 21:49:34] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+nohup: ignoring input
+Stopping services on ports: 10200
+2025/06/11 21:49:34 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+2025/06/11 21:49:34 Unable to start a http server.
+Stopped services on ports:
+Successfully stopped service on port 10200.
+[32m[success 0611 21:49:34] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+nohup: ignoring input
+2025/06/11 21:49:34 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+2025/06/11 21:49:34 Unable to start a http server.
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Not started ports:
+!!! [0611 21:49:36] Port 10110 is not started.
+!!! [0611 21:49:36] Port 10120 is not started.
+!!! [0611 21:49:36] Port 10130 is not started.
+!!! [0611 21:49:36] Port 10150 is not started.
+!!! [0611 21:49:36] Port 10160 is not started.
+!!! [0611 21:49:36] Port 10180 is not started.
+!!! [0611 21:49:36] Port 10190 is not started.
+!!! [0611 21:49:36] Port 10200 is not started.
+!!! [0611 21:49:36] Call tree:
+!!! [0611 21:49:36]  1: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:245 openim::rpc::start(...)
+[31m!!! Error in /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147 [0m
+  Error in /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147. 'return 1' exited with status 1
+Call stack:
+  1: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:147 openim::rpc::start(...)
+  2: /opt/openim/open-im-server/scripts/install/openim-rpc.sh:245 main(...)
+Exiting with status 1
+!!! [0611 21:49:36] Call tree:
+!!! [0611 21:49:36]  1: ./scripts/start-all.sh:78 execute_scripts(...)
+[31m!!! Error in ./scripts/start-all.sh:55 [0m
+  Error in ./scripts/start-all.sh:55. '"$script_path" "$arg"' exited with status 1
+Call stack:
+  1: ./scripts/start-all.sh:55 execute_scripts(...)
+  2: ./scripts/start-all.sh:78 main(...)
+Exiting with status 1
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-user/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-friend/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-msg/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-group/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-auth/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-conversation/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-third/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-encryption/main.go:31 +0x114
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 21:50:00] Starting script: openim-api.sh
+Starting openim-api ...
+Stopping services on ports: 10002
+[32m[success 0611 21:50:01] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 21:50:01 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 3086183, FD: 10, Started: Wed Jun 11 21:50:00 2025
+[32m[success 0611 21:50:03] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 21:50:03] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 21:50:04] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 21:50:04 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 21:50:04] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 21:50:04 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+[32m[success 0611 21:50:04] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 21:50:04 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+[32m[success 0611 21:50:04] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 21:50:04 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 21:50:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 21:50:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+[32m[success 0611 21:50:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 21:50:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+[32m[success 0611 21:50:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 21:50:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+[32m[success 0611 21:50:05] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 21:50:05 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 3086837, FD: 3, Started: Wed Jun 11 21:50:03 2025
+Port 10120 - Command: openim-rpc-frie, PID: 3086890, FD: 3, Started: Wed Jun 11 21:50:03 2025
+Port 10130 - Command: openim-rpc-msg, PID: 3086934, FD: 3, Started: Wed Jun 11 21:50:03 2025
+Port 10150 - Command: openim-rpc-grou, PID: 3086972, FD: 3, Started: Wed Jun 11 21:50:04 2025
+Port 10160 - Command: openim-rpc-auth, PID: 3087019, FD: 3, Started: Wed Jun 11 21:50:04 2025
+Port 10180 - Command: openim-rpc-conv, PID: 3087083, FD: 3, Started: Wed Jun 11 21:50:04 2025
+Port 10190 - Command: openim-rpc-thir, PID: 3087125, FD: 3, Started: Wed Jun 11 21:50:04 2025
+Port 10200 - Command: openim-rpc-encr, PID: 3087162, FD: 3, Started: Wed Jun 11 21:50:04 2025
+[32m[success 0611 21:50:07] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 21:50:07] Starting script: openim-push.sh
++++ [0611 21:50:07] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:50:07] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:50:07] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 21:50:07] Failed to stop the openim-push service.
+[32m[success 0611 21:50:07] [0m==>  All specified services were stopped.
++++ [0611 21:50:07] push port list: 10170
++++ [0611 21:50:07] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 21:50:08 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 3087425, Port: N/A, Start time: Wed Jun 11 21:50:06 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 3087947, Port: 20170
+10170, Start time: Wed Jun 11 21:50:07 2025
+Process openim-push - Command: , PID: 3087950, Port: N/A, Start time: 
+[32m[success 0611 21:50:08] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 21:50:08] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 21:50:08] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 21:50:08] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 21:50:08] [0m==>  All specified services were stopped.
++++ [0611 21:50:08] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 21:50:08] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 21:50:08 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2025/06/11 21:50:08 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+2025/06/11 21:50:08 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+2025/06/11 21:50:08 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+GetPortFromConfig: prometheus_port
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000005b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000005b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000005b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0000124b0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [1] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004b7b00, {use config /opt/openim/open-im-server/config/notification.yaml
+0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(PortFromConfig: prometheus_port
+0x0GetPortFromConfig: prometheus_port
+?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004b7b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004b7b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004b7b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000268350)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000005b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000005b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000005b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00069c2d8)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 3088491, Port: N/A, Start time: Wed Jun 11 21:50:08 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3088494, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3088508, Port: N/A, Start time: 
+[32m[success 0611 21:50:09] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 21:50:09] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 21:50:09] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 21:50:09] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 21:50:09] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 21:50:09] [0m==>  All specified services were stopped.
++++ [0611 21:50:09] OpenIM Mssage Getway ports: 10140
++++ [0611 21:50:09] OpenIM WS ports: 10001
++++ [0611 21:50:09] OpenIM Prometheus ports: 20140
++++ [0611 21:50:09] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 21:50:09 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 3088659, Port: N/A, Start time: Wed Jun 11 21:50:08 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 3089148, Port: 20140
+10001
+10140, Start time: Wed Jun 11 21:50:09 2025
+Process openim-msggateway - Command: , PID: 3089151, Port: N/A, Start time: 
+[32m[success 0611 21:50:10] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 21:50:10] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 21:50:10] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 21:50:10] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 21:50:10] [0m==>  All specified services were stopped.
++++ [0611 21:50:10] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 21:50:10 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 3089291, Port: N/A, Start time: Wed Jun 11 21:50:09 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 3089791, Port: N/A, Start time: Wed Jun 11 21:50:09 2025
+Process openim-crontask - Command: , PID: 3089794, Port: N/A, Start time: 
+[32m[success 0611 21:50:11] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 21:50:11] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 21:50:13] [0m==>  ✨  All OpenIM services have been successfully started!
+
+# Begin to stop all openim service
+Stopping services on ports: 10110 10120 10130 10140 10150 10160 10170 10180 10190 10002 10001
+Stopped services on ports:
+Successfully stopped service on port 10110.
+Successfully stopped service on port 10120.
+Successfully stopped service on port 10130.
+Successfully stopped service on port 10140.
+Successfully stopped service on port 10150.
+Successfully stopped service on port 10160.
+Successfully stopped service on port 10170.
+Successfully stopped service on port 10180.
+Successfully stopped service on port 10190.
+Successfully stopped service on port 10002.
+[32m[success 0611 21:56:34] [0m==>  All specified services were stopped.
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64
+Stopped services:
+Successfully stopped the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64 service.
+[32m[success 0611 21:56:34] [0m==>  All specified services were stopped.
+
+# Begin to start all openim service scripts
+
+## Pre Starting OpenIM services
+Preparing to start OpenIM Tools...
+Starting ncpu...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/ncpu...
+Starting ncpu...
+Starting component...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/component...
+Starting component...
+Starting up35...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/up35...
+Starting up35...
+
+## Starting OpenIM services
++++ [0611 21:56:47] Starting script: openim-api.sh
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-user/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-friend/main.go:31 +0x114
+Starting openim-api ...
+Stopping services on ports: 10002
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-msg/main.go:31 +0x114
+[32m[success 0611 21:56:47] [0m==>  All specified services were stopped.
+OpenIM openim-api config path: /opt/openim/open-im-server/config/
+Starting openim-api service, port: 10002, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-api
+2025/06/11 21:56:47 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Error: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+      --prometheus_port int         server prometheus listen port
+  -w, --ws_port int                 ws server listen port
+
+panic: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msggateway/main.go:28 +0xf6
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-group/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-auth/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-push/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-conversation/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-third/main.go:31 +0x114
+panic: ==> github.com/openimsdk/open-im-server/v3/pkg/common/startrpc.Start()@149: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-rpc/openim-rpc-encryption/main.go:31 +0x114
+Checking ports: 10002
+
+### Started ports:
+Port 10002 - Command: openim-api, PID: 3112907, FD: 10, Started: Wed Jun 11 21:56:47 2025
+[32m[success 0611 21:56:49] [0m==>  All specified processes are running.
+openim-api.sh executed successfully.
++++ [0611 21:56:49] Starting script: openim-rpc.sh
+Starting openim-rpc ...
+Stopping services on ports: 10110
+[32m[success 0611 21:56:50] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-user config path: /opt/openim/open-im-server/config
+Starting openim-rpc-user service, port: 10110, prometheus port: 20110, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-user
+Stopping services on ports: 10120
+2025/06/11 21:56:50 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start User server, port: 10110, prometheusPort: 20110, OpenIM version: v3.3.0
+[32m[success 0611 21:56:50] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-friend config path: /opt/openim/open-im-server/config
+Starting openim-rpc-friend service, port: 10120, prometheus port: 20120, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-friend
+Stopping services on ports: 10130
+2025/06/11 21:56:50 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Friend server, port: 10120, prometheusPort: 20120, OpenIM version: v3.3.0
+[32m[success 0611 21:56:51] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-msg config path: /opt/openim/open-im-server/config
+Starting openim-rpc-msg service, port: 10130, prometheus port: 20130, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-msg
+Stopping services on ports: 10150
+2025/06/11 21:56:51 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Msg server, port: 10130, prometheusPort: 20130, OpenIM version: v3.3.0
+[32m[success 0611 21:56:51] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-group config path: /opt/openim/open-im-server/config
+Starting openim-rpc-group service, port: 10150, prometheus port: 20150, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-group
+Stopping services on ports: 10160
+2025/06/11 21:56:51 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Group server, port: 10150, prometheusPort: 20150, OpenIM version: v3.3.0
+[32m[success 0611 21:56:51] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-auth config path: /opt/openim/open-im-server/config
+Starting openim-rpc-auth service, port: 10160, prometheus port: 20160, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-auth
+Stopping services on ports: 10180
+2025/06/11 21:56:51 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Auth server, port: 10160, prometheusPort: 20160, OpenIM version: v3.3.0
+[32m[success 0611 21:56:51] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-conversation config path: /opt/openim/open-im-server/config
+Starting openim-rpc-conversation service, port: 10180, prometheus port: 20230, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-conversation
+Stopping services on ports: 10190
+2025/06/11 21:56:51 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Conversation server, port: 10180, prometheusPort: 20230, OpenIM version: v3.3.0
+[32m[success 0611 21:56:51] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-third config path: /opt/openim/open-im-server/config
+Starting openim-rpc-third service, port: 10190, prometheus port: 21301, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-third
+Stopping services on ports: 10200
+2025/06/11 21:56:52 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Third server, port: 10190, prometheusPort: 21301, OpenIM version: v3.3.0
+[32m[success 0611 21:56:52] [0m==>  All specified services were stopped.
+OpenIM openim-rpc-encryption config path: /opt/openim/open-im-server/config
+Starting openim-rpc-encryption service, port: 10200, prometheus port: 21302, binary root: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-rpc-encryption
+2025/06/11 21:56:52 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Encryption server, port: 10200, prometheusPort: 21302, OpenIM version: v3.3.0
+Checking ports: 10110 10120 10130 10150 10160 10180 10190 10200
+
+### Started ports:
+Port 10110 - Command: openim-rpc-user, PID: 3113579, FD: 3, Started: Wed Jun 11 21:56:49 2025
+Port 10120 - Command: openim-rpc-frie, PID: 3113618, FD: 3, Started: Wed Jun 11 21:56:50 2025
+Port 10130 - Command: openim-rpc-msg, PID: 3113704, FD: 3, Started: Wed Jun 11 21:56:50 2025
+Port 10150 - Command: openim-rpc-grou, PID: 3113768, FD: 3, Started: Wed Jun 11 21:56:50 2025
+Port 10160 - Command: openim-rpc-auth, PID: 3113836, FD: 3, Started: Wed Jun 11 21:56:50 2025
+Port 10180 - Command: openim-rpc-conv, PID: 3113872, FD: 3, Started: Wed Jun 11 21:56:50 2025
+Port 10190 - Command: openim-rpc-thir, PID: 3113910, FD: 3, Started: Wed Jun 11 21:56:51 2025
+Port 10200 - Command: openim-rpc-encr, PID: 3113947, FD: 3, Started: Wed Jun 11 21:56:51 2025
+[32m[success 0611 21:56:53] [0m==>  All specified processes are running.
+openim-rpc.sh executed successfully.
++++ [0611 21:56:53] Starting script: openim-push.sh
++++ [0611 21:56:54] Start OpenIM Push, binary root: openim-push
+Start OpenIM Push, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:56:54] prepare start push process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push
++++ [0611 21:56:54] prepare start push process, port: 10170, prometheus port: 20170
+Stopping services with names: openim-push
+Services that couldn't be stopped:
++++ [0611 21:56:54] Failed to stop the openim-push service.
+[32m[success 0611 21:56:54] [0m==>  All specified services were stopped.
++++ [0611 21:56:54] push port list: 10170
++++ [0611 21:56:54] prometheus port list: 20170
+start push process, port: 10170, prometheus port: 20170
+Checking processes: openim-push
+2025/06/11 21:56:54 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start Push server, port: 10170, prometheusPort: 20170, OpenIM version: v3.3.0
+Started processes:
+Process openim-push - Command: bash /opt/openim/open-im-server/scripts/install/openim-push.sh openim::push::start, PID: 3114207, Port: N/A, Start time: Wed Jun 11 21:56:53 2025
+Process openim-push - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-push --port 10170 -c /opt/openim/open-im-server/config/ --prometheus_port 20170, PID: 3114773, Port: 20170
+10170, Start time: Wed Jun 11 21:56:53 2025
+Process openim-push - Command: , PID: 3114776, Port: N/A, Start time: 
+[32m[success 0611 21:56:54] [0m==>  All processes are running.
+openim-push.sh executed successfully.
++++ [0611 21:56:54] Starting script: openim-msgtransfer.sh
+Start OpenIM Msggateway, binary root: openim-msgtransfer
++++ [0611 21:56:55] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+Services that couldn't be stopped:
++++ [0611 21:56:55] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer service.
+[32m[success 0611 21:56:55] [0m==>  All specified services were stopped.
++++ [0611 21:56:55] OpenIM Prometheus ports: openim::util::list-to-string 21400, 21401, 21402, 21403
++++ [0611 21:56:55] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+openim maggateway num: 4
+prometheus port: openim::util::list-to-string
+prometheus port: 21400,
+prometheus port: 21401,
+prometheus port: 21402,
+Checking processes: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer
+2025/06/11 21:56:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+2025/06/11 21:56:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+2025/06/11 21:56:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+PortFromConfig: prometheus_port
+configFolderPath: /opt/openim/open-im-server/config/
+GetPortFromConfig: prometheus_port
+use config /opt/openim/open-im-server/config/config.yaml
+panic: runtime error: index out of range [1] with length 1use config /opt/openim/open-im-server/config/notification.yaml
+
+
+goroutine 1 [running]:
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc0004af500, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+2025/06/11 21:56:55 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc0004af500?, {0x143db7c?configFolderPath: /opt/openim/open-im-server/config/
+, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc0004af500, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc0004af500)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc00051a2e0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+use config /opt/openim/open-im-server/config/config.yaml
+panic: runtime error: index out of range [3] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000227800, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000227800?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).executeuse config /opt/openim/open-im-server/config/notification.yaml
+(0xc000227800, {0xc000134010, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +PortFromConfig: prometheus_port
+0x862
+GetPortFromConfig: prometheus_port
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000227800)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc000012388)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+panic: runtime error: index out of range [2] with length 1
+
+goroutine 1 [running]:
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).GetPortFromConfig(0x16a28a0?, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:55 +0x118
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).PortFromConfig(0xc000005b00, {0x1451cc8, 0xf})
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:185 +0xad
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).getPrometheusPortFlag(0x0?, 0x0?)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:156 +0x51
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).addRunE.func1(0xc000005b00?, {0x143db7c?, 0x4?, 0x4?})
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:40 +0x26
+github.com/spf13/cobra.(*Command).execute(0xc000005b00, {0xc00003e0b0, 0x4, 0x4})
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:940 +0x862
+github.com/spf13/cobra.(*Command).ExecuteC(0xc000005b00)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:1068 +0x3bd
+github.com/spf13/cobra.(*Command).Execute(...)
+	/root/go/pkg/mod/github.com/spf13/cobra@v1.7.0/command.go:992
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*RootCmd).Execute(...)
+	/opt/openim/open-im-server/pkg/common/cmd/root.go:172
+github.com/openimsdk/open-im-server/v3/pkg/common/cmd.(*MsgTransferCmd).Exec(0xc0001722f0)
+	/opt/openim/open-im-server/pkg/common/cmd/msg_transfer.go:46 +0x2d
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:25 +0xbb
+start msg transfer prometheusPort: 20002
+msg transfer not start mysql consumer
+Started processes:
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer -c /opt/openim/open-im-server/config/ -n 0, PID: 3115344, Port: N/A, Start time: Wed Jun 11 21:56:54 2025
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3115347, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3115354, Port: N/A, Start time: 
+Process /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msgtransfer - Command: , PID: 3115361, Port: N/A, Start time: 
+[32m[success 0611 21:56:55] [0m==>  All processes are running.
+openim-msgtransfer.sh executed successfully.
++++ [0611 21:56:55] Starting script: openim-msggateway.sh
+Start OpenIM Msggateway, binary root: openim-msggateway
++++ [0611 21:56:56] Start OpenIM Msggateway, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway
+Services that couldn't be stopped:
++++ [0611 21:56:56] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway service.
+[32m[success 0611 21:56:56] [0m==>  All specified services were stopped.
+Stopping services on ports: 10140
+[32m[success 0611 21:56:56] [0m==>  All specified services were stopped.
++++ [0611 21:56:56] OpenIM Mssage Getway ports: 10140
++++ [0611 21:56:56] OpenIM WS ports: 10001
++++ [0611 21:56:56] OpenIM Prometheus ports: 20140
++++ [0611 21:56:56] OpenIM Msggateway config path: /opt/openim/open-im-server/config/
+start push process, port: 10140, prometheus port: 20140
+Checking processes: openim-msggateway
+2025/06/11 21:56:56 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Started processes:
+Process openim-msggateway - Command: bash /opt/openim/open-im-server/scripts/install/openim-msggateway.sh openim::msggateway::start, PID: 3115492, Port: N/A, Start time: Wed Jun 11 21:56:54 2025
+Process openim-msggateway - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-msggateway --port 10140 --ws_port 10001 --prometheus_port 20140 -c /opt/openim/open-im-server/config/, PID: 3115985, Port: 20140
+10001
+10140, Start time: Wed Jun 11 21:56:55 2025
+Process openim-msggateway - Command: , PID: 3115988, Port: N/A, Start time: 
+[32m[success 0611 21:56:56] [0m==>  All processes are running.
+openim-msggateway.sh executed successfully.
++++ [0611 21:56:56] Starting script: openim-crontask.sh
+Start OpenIM Cron, binary root: openim-crontask
++++ [0611 21:56:57] Start OpenIM Cron, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Stopping services with names: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Services that couldn't be stopped:
++++ [0611 21:56:57] Failed to stop the /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask service.
+[32m[success 0611 21:56:57] [0m==>  All specified services were stopped.
++++ [0611 21:56:57] start cron_task process, path: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask
+Checking processes: openim-crontask
+2025/06/11 21:56:57 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config/
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+cron task start, config 0 2 * * 3
+Started processes:
+Process openim-crontask - Command: bash /opt/openim/open-im-server/scripts/install/openim-crontask.sh openim::crontask::start, PID: 3116089, Port: N/A, Start time: Wed Jun 11 21:56:55 2025
+Process openim-crontask - Command: /opt/openim/open-im-server/_output/bin/platforms/linux/amd64/openim-crontask -c /opt/openim/open-im-server/config/, PID: 3116597, Port: N/A, Start time: Wed Jun 11 21:56:56 2025
+Process openim-crontask - Command: , PID: 3116600, Port: N/A, Start time: 
+[32m[success 0611 21:56:57] [0m==>  All processes are running.
+openim-crontask.sh executed successfully.
++++ [0611 21:56:57] Starting script: openim-tools.sh
+Starting OpenIM Tools...
+Starting imctl...
+openim-tools.sh executed successfully.
+
+## Post Starting OpenIM services
+Post-start actions for OpenIM Tools...
+Starting infra...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/infra...
+Starting infra...
+Starting versionchecker...
+Starting PATH: /opt/openim/open-im-server/_output/bin/tools/linux/amd64/versionchecker...
+Starting versionchecker...
+[32m[success 0611 21:56:59] [0m==>  ✨  All OpenIM services have been successfully started!

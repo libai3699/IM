@@ -1,0 +1,24 @@
+2025/06/11 07:04:11 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: ws_port
+PortFromConfig: prometheus_port
+start rpc/msg_gateway server, port:  10140 10001 20140 , OpenIM version:  v3.3.0
+start MessageGateway server, port: 10140, prometheusPort: 20140, OpenIM version: v3.3.0
+Error: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+  -p, --port int                    server listen port
+      --prometheus_port int         server prometheus listen port
+  -w, --ws_port int                 ws server listen port
+
+panic: ==> github.com/openimsdk/open-im-server/v3/internal/msggateway.(*WsServer).Run()@221: : timeout exit
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msggateway/main.go:28 +0xf6

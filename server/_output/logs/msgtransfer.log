@@ -1,0 +1,21 @@
+2025/06/11 07:05:30 maxprocs: Leaving GOMAXPROCS=16: CPU quota undefined
+configFolderPath: /opt/openim/open-im-server/config
+use config /opt/openim/open-im-server/config/config.yaml
+use config /opt/openim/open-im-server/config/notification.yaml
+PortFromConfig: prometheus_port
+GetPortFromConfig: prometheus_port
+Error: zk: invalid path
+Usage:
+  Start openIM application [flags]
+
+Flags:
+  -c, --config_folder_path string   path to config file folder
+  -h, --help                        help for Start
+      --prometheus_port int         server prometheus listen port
+  -n, --transferProgressIndex int   transfer progress index
+
+panic: zk: invalid path
+
+goroutine 1 [running]:
+main.main()
+	/opt/openim/open-im-server/cmd/openim-msgtransfer/main.go:26 +0xec

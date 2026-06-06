@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+  <title>高德地图位置选择器 v2.0</title>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-touch-callout: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+
+    /* 固定底部控制面板 */
+    .control-panel {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-radius: 16px 16px 0 0;
+      box-shadow: 0 -2px 20px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 地图容器调整 */
+    #container {
+      width: 100%;
+      height: 50vh;
+      position: relative;
+      box-sizing: border-box;
+    }
+
+    /* 搜索框区域在面板顶部 */
+    .search-header {
+      padding: 16px 20px;
+      border-bottom: 1px solid #f0f0f0;
+      flex-shrink: 0;
+      background: white;
+      border-radius: 16px 16px 0 0;
+    }
+
+    /* 位置列表区域 */
+    .location-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0;
+      background: white;
+    }
+
+
+
+    /* 位置列表项 */
+    .location-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid #f5f5f5;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: background-color 0.2s ease;
+      position: relative;
+    }
+
+    .location-item:hover {
+      background-color: #f8f9fa;
+    }
+
+    .location-item.selected {
+      background-color: #f0f9ff;
+    }
+
+    .location-info {
+      flex: 1;
+    }
+
+    .location-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 4px;
+      line-height: 1.3;
+    }
+
+    .location-address {
+      font-size: 13px;
+      color: #999;
+      line-height: 1.4;
+    }
+
+    .location-distance {
+      font-size: 12px;
+      color: #999;
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background-color: #007AFF;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #0056CC;
+    }
+
+    .btn-primary:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    .btn-secondary {
+      background-color: #f1f3f4;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background-color: #e8eaed;
+    }
+
+    /* 搜索框样式 */
+    .search-input {
+      width: 100%;
+      padding: 12px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+      box-sizing: border-box;
+      background: #f8f9fa;
+      height: 44px;
+    }
+
+    .search-input::placeholder {
+      color: #999;
+    }
+
+    .search-input:focus {
+      background: #f0f0f0;
+    }
+
+
+
+    /* 自定义定位按钮 - 精致小巧，位于白色面板右上方 */
+    .custom-location-btn {
+      position: fixed;
+      top: calc(50vh - 60px); /* 白色面板上方一点 */
+      right: 20px;
+      width: 36px;
+      height: 36px;
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 1002;
+      transition: all 0.2s ease;
+    }
+
+    .custom-location-btn:hover {
+      background: #f8f9fa;
+      transform: scale(1.05);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .custom-location-btn:active {
+      transform: scale(0.95);
+    }
+
+    .custom-location-btn svg {
+      color: #007AFF;
+      width: 20px;
+      height: 20px;
+    }
+
+    /* 定位中的动画效果 */
+    .custom-location-btn.locating {
+      background: #007AFF;
+    }
+
+    .custom-location-btn.locating svg {
+      color: white;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+
+
+
+
+    /* 状态提示 */
+    .status-tip {
+      position: fixed;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 14px;
+      z-index: 998;
+      pointer-events: none;
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+
+    .status-tip.show {
+      opacity: 1;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .search-box {
+        top: 10px;
+        left: 10px;
+        right: 10px;
+      }
+
+      /* 控制面板在移动端正常显示，不使用transform */
+
+      .btn {
+        font-size: 15px;
+        padding: 12px 16px;
+      }
+
+      /* 确保移动端搜索框可见 */
+      .search-header {
+        padding: 12px 16px;
+      }
+
+      .search-input {
+        font-size: 16px; /* 防止iOS缩放 */
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container"></div>
+
+  <!-- 自定义定位按钮 - 精致小巧 -->
+  <div class="custom-location-btn" id="locationBtn" onclick="triggerLocationUpdate()" title="定位到当前位置">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="12" r="3" fill="currentColor"/>
+      <circle cx="12" cy="2" r="1.5" fill="currentColor"/>
+      <circle cx="12" cy="22" r="1.5" fill="currentColor"/>
+      <circle cx="2" cy="12" r="1.5" fill="currentColor"/>
+      <circle cx="22" cy="12" r="1.5" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- 状态提示 -->
+  <div class="status-tip" id="statusTip">
+    点击地图选择位置
+  </div>
+
+  <!-- 底部控制面板 -->
+  <div class="control-panel" id="controlPanel">
+    <!-- 搜索框在面板顶部 -->
+    <div class="search-header">
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索地点" />
+    </div>
+
+    <!-- 位置列表 -->
+    <div class="location-list" id="locationList">
+      <!-- 位置列表项将通过JavaScript动态生成 -->
+    </div>
+  </div>
+
+  <!-- 高德地图API -->
+  <script type="text/javascript">
+    // ========== 配置区域 - 只需要在这里修改密钥 ==========
+    const AMAP_API_KEY = "f51337d60fe6c16880d9a86e6134fafc";        // 你的应用Key
+    const AMAP_SECURITY_KEY = "e2f50d7c8793655b91761a04d1559193";    // 你的安全密钥
+    // ================================================
+
+    // 设置安全密钥
+    window._AMapSecurityConfig = {
+      securityJsCode: AMAP_SECURITY_KEY
+    };
+
+    // 检查是否配置了正确的密钥
+    function checkApiKey() {
+      if (AMAP_API_KEY === "你的应用Key" || AMAP_SECURITY_KEY === "你的安全密钥") {
+        alert("⚠️ 请先配置高德地图API密钥！\n\n1. 访问 https://console.amap.com/ 申请密钥\n2. 在代码顶部的配置区域填入你的密钥");
+        return false;
+      }
+      return true;
+    }
+  </script>
+  <script src="https://webapi.amap.com/loader.js"></script>
+
+  <script type="text/javascript">
+    let map;
+    let marker;
+    let geocoder;
+    let autoComplete;
+    let placeSearch;
+    let AMapInstance; // 保存AMap实例
+    let isMapLoaded = false; // 地图是否已加载
+    let geolocationControl; // 保存定位控件引用
+
+    // 初始化地图
+    AMapLoader.load({
+      key: AMAP_API_KEY, // 使用全局配置的API Key
+      version: "2.0",
+      plugins: ['AMap.Geocoder', 'AMap.AutoComplete', 'AMap.PlaceSearch', 'AMap.Geolocation']
+    }).then((AMap) => {
+      AMapInstance = AMap; // 保存AMap实例
+      
+      // 先获取当前位置，再初始化地图
+      getCurrentLocationFirst();
+      
+    }).catch((e) => {
+      console.error("地图加载失败:", e);
+
+      // 检查是否是API密钥问题
+      if (e.message && e.message.includes('INVALID_USER_KEY')) {
+        updateStatus("API密钥无效，请检查密钥配置");
+      } else if (e.message && e.message.includes('DAILY_QUERY_OVER_LIMIT')) {
+        updateStatus("API调用次数超限，请检查配额");
+      } else if (e.message && e.message.includes('USER_KEY_PLAT_NOMATCH')) {
+        updateStatus("API密钥平台不匹配，请检查密钥设置");
+      } else {
+        updateStatus("地图加载失败，请检查网络连接和API密钥");
+      }
+    });
+
+    // 先获取位置再初始化地图
+    function getCurrentLocationFirst() {
+      showStatusTip("正在获取当前位置...", 3000);
+
+      // 先用默认位置初始化地图
+      initializeMap(0, 0, 2);
+    }
+
+    // 初始化地图函数
+    function initializeMap(lng, lat, zoom) {
+      // 创建地图实例
+      map = new AMapInstance.Map("container", {
+        zoom: zoom,
+        center: [lng, lat],
+        mapStyle: 'amap://styles/normal',
+        resizeEnable: true,
+        dragEnable: true,
+        zoomEnable: true,
+        doubleClickZoom: false
+      });
+
+      // 初始化地理编码
+      geocoder = new AMapInstance.Geocoder({
+        city: "全国"
+      });
+
+      // 初始化自动完成
+      autoComplete = new AMapInstance.AutoComplete({
+        city: "全国"
+      });
+
+      // 初始化POI搜索
+      placeSearch = new AMapInstance.PlaceSearch({
+        city: "全国"
+      });
+
+      // 地图点击事件
+      map.on('click', function (e) {
+        const lng = e.lnglat.lng;
+        const lat = e.lnglat.lat;
+        console.log('地图点击事件触发:', lng, lat);
+        selectLocationByClick(lng, lat);
+      });
+
+      // 地图拖拽结束事件
+      map.on('dragend', function () {
+        const center = map.getCenter();
+        selectLocationByCenter(center.lng, center.lat);
+      });
+
+      // 搜索框事件
+      setupSearchBox();
+
+      isMapLoaded = true; // 标记地图已加载
+      showStatusTip("点击地图选择位置", 2000);
+
+      // 创建定位控件并添加到地图（禁用自带按钮）
+      geolocationControl = new AMapInstance.Geolocation({
+        enableHighAccuracy: true,
+        showMarker: true,        // 显示定位标记（用户真实位置）
+        showCircle: true,        // 显示精度圆圈
+        panToLocation: true,     // 自动移动地图到定位位置
+        zoomToAccuracy: true,    // 自动缩放到合适级别
+        showButton: false,       // 禁用自带按钮，使用自定义按钮
+        markerOptions: {         // 自定义定位标记样式
+          icon: new AMapInstance.Icon({
+            size: new AMapInstance.Size(36, 36),
+            image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTgiIGZpbGw9IiMwMDdBRkYiLz4KPGNpcmNsZSBjeD0iMTgiIGN5PSIxOCIgcj0iMTIiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjE4IiBjeT0iMTgiIHI9IjYiIGZpbGw9IiMwMDdBRkYiLz4KPC9zdmc+',
+            imageOffset: new AMapInstance.Pixel(-18, -18)
+          }),
+          title: '我的位置'
+        },
+        circleOptions: {         // 自定义精度圆圈样式
+          strokeColor: '#007AFF',
+          strokeOpacity: 0.5,
+          strokeWeight: 2,
+          fillColor: '#007AFF',
+          fillOpacity: 0.1
+        }
+      });
+
+      // 添加定位控件到地图
+      map.addControl(geolocationControl);
+
+      // 监听定位成功事件
+      geolocationControl.on('complete', function(data) {
+        console.log('定位成功:', data);
+        const locationBtn = document.getElementById('locationBtn');
+        locationBtn.classList.remove('locating');
+        showStatusTip("已定位到当前位置", 2000);
+
+        // 明确移动地图到定位位置
+        console.log('移动地图到定位位置:', data.position.lng, data.position.lat);
+        map.setCenter([data.position.lng, data.position.lat]);
+        map.setZoom(16); // 设置合适的缩放级别
+
+        // 处理位置选择（定位，不是手动点击）
+        processLocationSelection(data.position.lng, data.position.lat, false);
+      });
+
+      // 监听定位失败事件
+      geolocationControl.on('error', function(data) {
+        console.log('定位失败:', data);
+        const locationBtn = document.getElementById('locationBtn');
+        locationBtn.classList.remove('locating');
+        showStatusTip("定位失败，请手动选择位置", 2000);
+      });
+
+      // 自动开始定位
+      geolocationControl.getCurrentPosition();
+
+      // 添加一些示例位置数据用于测试
+      addSampleLocations();
+
+      // 调试：检查搜索框位置
+      console.log('搜索框父元素:', document.getElementById('searchInput').parentElement);
+      console.log('控制面板元素:', document.getElementById('controlPanel'));
+    }
+
+    // 全局变量存储当前选择的位置信息
+    let currentSelection = {
+      latitude: null,
+      longitude: null,
+      address: null,
+      name: null,
+      exactName: null // 精确的建筑物名称（来自逆地理编码）
+    };
+
+    // 地图标记点
+    let currentMarker = null;
+
+    // 附近位置列表
+    let nearbyLocations = [];
+    let selectedLocationIndex = -1;
+
+    // 通过点击选择位置
+    function selectLocationByClick(lng, lat) {
+      console.log('selectLocationByClick 被调用:', lng, lat);
+
+      // 添加或更新标记点
+      addMarker(lng, lat);
+
+      // 处理位置选择（手动点击）
+      processLocationSelection(lng, lat, true);
+    }
+
+    // 通过中心点选择位置（拖拽时）
+    function selectLocationByCenter(lng, lat) {
+      // 添加或更新标记点
+      addMarker(lng, lat);
+
+      // 处理位置选择（拖拽，不是手动点击）
+      processLocationSelection(lng, lat, false);
+    }
+
+    // 从地址组件中提取建筑物名称
+    function extractBuildingNameFromComponents(formattedAddress, addressComponent) {
+      if (!formattedAddress || !addressComponent) return '';
+
+      console.log('正在从地址组件提取建筑物名称');
+      console.log('完整地址:', formattedAddress);
+      console.log('地址组件:', addressComponent);
+
+      let buildingName = formattedAddress;
+
+      // 按顺序移除地址组件
+      const componentsToRemove = [
+        addressComponent.province,      // 省
+        addressComponent.city,          // 市
+        addressComponent.district,      // 区
+        addressComponent.township,      // 街道/镇
+        addressComponent.street,        // 街道名
+        addressComponent.streetNumber,  // 门牌号
+        addressComponent.neighborhood   // 社区
+      ];
+
+      for (const component of componentsToRemove) {
+        if (component && component.trim()) {
+          buildingName = buildingName.replace(component, '');
+          console.log('移除组件:', component, '剩余:', buildingName);
+        }
+      }
+
+      // 清理剩余的空白字符
+      buildingName = buildingName.trim();
+
+      console.log('最终建筑物名称:', buildingName);
+
+      return buildingName || '当前位置';
+    }
+
+    // 添加标记点
+    function addMarker(lng, lat) {
+      // 移除之前的自定义标记点
+      if (currentMarker) {
+        map.remove(currentMarker);
+      }
+
+      // 创建新的标记点（用户选择的位置）
+      currentMarker = new AMapInstance.Marker({
+        position: [lng, lat],
+        icon: new AMapInstance.Icon({
+          size: new AMapInstance.Size(32, 40),
+          image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAzMiA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE2IDQwQzE2IDQwIDMyIDI0LjggMzIgMTZDMzIgNy4yIDI0LjggMCAxNiAwQzcuMiAwIDAgNy4yIDAgMTZDMCAyNC44IDE2IDQwIDE2IDQwWiIgZmlsbD0iI0ZGNDUwMCIvPgo8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI4IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K',
+          imageOffset: new AMapInstance.Pixel(-16, -40)
+        }),
+        anchor: 'bottom-center',
+        title: '选择的位置',
+        zIndex: 100  // 确保选择标记在最上层
+      });
+
+      // 添加到地图
+      map.add(currentMarker);
+
+      console.log('已添加标记点到位置:', lng, lat);
+    }
+
+    // 处理位置选择的通用逻辑
+    function processLocationSelection(lng, lat, isManualClick = false) {
+      // 更新全局选择信息
+      currentSelection.latitude = lat;
+      currentSelection.longitude = lng;
+
+      // 逆地理编码获取地址
+      geocoder.getAddress([lng, lat], function (status, result) {
+        console.log('地址解析状态:', status);
+        console.log('地址解析结果:', result);
+
+        if (status === 'complete' && result.regeocode) {
+          const address = result.regeocode.formattedAddress;
+          const addressComponent = result.regeocode.addressComponent;
+
+          // 从详细地址中提取建筑物名称
+          let buildingName = extractBuildingNameFromComponents(address, addressComponent);
+          console.log('提取的建筑物名称:', buildingName);
+
+          showStatusTip('正在搜索附近位置...', 1500);
+
+          // 更新全局选择信息
+          currentSelection.address = address;
+          currentSelection.exactName = buildingName;
+
+          // 搜索附近位置并更新列表
+          searchNearbyLocations(lng, lat, isManualClick);
+        } else {
+          // 显示详细的错误信息
+          let errorMsg = '地址解析失败';
+          if (result && result.info) {
+            errorMsg += ': ' + result.info;
+          }
+          if (status === 'error') {
+            errorMsg += ' (网络错误或API密钥问题)';
+          }
+
+          showStatusTip(errorMsg, 3000);
+          console.error('地址解析失败详情:', { status, result });
+        }
+      });
+    }
+
+    // 搜索附近位置
+    function searchNearbyLocations(lng, lat, isManualClick = false) {
+      // 尝试使用更小的搜索半径来获取更精确的POI
+      const searchRadius = isManualClick ? 50 : 1000; // 手动点击时使用50米半径
+
+      console.log('POI搜索参数:', { lng, lat, radius: searchRadius, isManualClick });
+
+      placeSearch.searchNearBy('', [lng, lat], searchRadius, function(status, result) {
+        console.log('POI搜索状态:', status);
+        console.log('POI搜索结果:', result);
+
+        if (status === 'complete' && result.poiList && result.poiList.pois) {
+          nearbyLocations = [];
+
+          if (isManualClick) {
+            // 手动点击：使用从地址组件提取的建筑物名称
+            nearbyLocations.push({
+              name: currentSelection.exactName || '选择的位置', // 使用从地址组件提取的建筑物名称
+              address: currentSelection.address, // 使用逆地理编码的详细地址
+              location: { lng: lng, lat: lat }, // 使用用户点击的精确坐标
+              distance: '0m', // 精确位置距离为0
+              isCurrentLocation: true
+            });
+            console.log('使用地址组件提取的建筑物名称作为精确位置:', currentSelection.exactName);
+          }
+
+          // 添加附近POI（跳过第一个，因为已经用作精确位置）
+          result.poiList.pois.forEach((poi, index) => {
+            const skipFirst = isManualClick && index === 0; // 手动点击时跳过第一个
+            if (!skipFirst && index < (isManualClick ? 11 : 15)) {
+              nearbyLocations.push({
+                name: poi.name,
+                address: poi.address || poi.pname + poi.cityname + poi.adname,
+                location: poi.location,
+                distance: poi.distance ? Math.round(poi.distance) + 'm' : '',
+                isCurrentLocation: !isManualClick && index === 0
+              });
+            }
+          });
+
+          // 默认选择第一项
+          selectedLocationIndex = 0;
+          updateLocationList();
+
+          // 自动发送位置信息给Flutter
+          sendLocationToFlutter();
+        } else {
+          console.log('POI搜索失败或无结果');
+          // 如果没有找到POI，添加一个基于坐标的位置
+          nearbyLocations = [{
+            name: currentSelection.exactName || (isManualClick ? '选择的位置' : '当前位置'),
+            address: currentSelection.address,
+            location: { lng: lng, lat: lat },
+            distance: '0m',
+            isCurrentLocation: true
+          }];
+          selectedLocationIndex = 0;
+          updateLocationList();
+          sendLocationToFlutter();
+        }
+      });
+    }
+
+    // 更新位置列表显示
+    function updateLocationList() {
+      const locationList = document.getElementById('locationList');
+      locationList.innerHTML = '';
+
+      nearbyLocations.forEach((location, index) => {
+        const item = document.createElement('div');
+        item.className = `location-item ${index === selectedLocationIndex ? 'selected' : ''}`;
+        item.onclick = () => selectLocationFromList(index);
+
+        item.innerHTML = `
+          <div class="location-info">
+            <div class="location-name">${location.name}</div>
+            <div class="location-address">${location.address}</div>
+          </div>
+          ${location.distance ? `<div class="location-distance">${location.distance}</div>` : ''}
+        `;
+
+        locationList.appendChild(item);
+      });
+    }
+
+    // 从列表中选择位置
+    function selectLocationFromList(index) {
+      selectedLocationIndex = index;
+      const location = nearbyLocations[index];
+
+      // 更新地图中心和标记
+      console.log('从列表选择位置，移动地图到:', location.location.lng, location.location.lat);
+      map.setCenter([location.location.lng, location.location.lat]);
+      addMarker(location.location.lng, location.location.lat);
+
+      // 更新当前选择
+      currentSelection = {
+        latitude: location.location.lat,
+        longitude: location.location.lng,
+        address: location.address,
+        name: location.name
+      };
+
+      // 更新列表显示
+      updateLocationList();
+
+      showStatusTip(`已选择: ${location.name}`, 1500);
+
+      // 自动发送位置信息给Flutter
+      sendLocationToFlutter();
+    }
+
+    // 初始化空的位置列表（等待用户定位或选择）
+    function addSampleLocations() {
+      nearbyLocations = [];
+      selectedLocationIndex = -1;
+      updateLocationList();
+    }
+
+    // 传统点击选择位置（保留兼容性）
+    function selectLocation(lng, lat) {
+      // 移动地图中心到选择的位置
+      map.setCenter([lng, lat]);
+      selectLocationByCenter(lng, lat);
+    }
+
+
+
+    // 触发定位更新（自定义定位按钮点击事件）
+    function triggerLocationUpdate() {
+      if (!isMapLoaded || !AMapInstance || !geolocationControl) {
+        showStatusTip("地图尚未加载完成，请稍后再试", 2000);
+        return;
+      }
+
+      const locationBtn = document.getElementById('locationBtn');
+      locationBtn.classList.add('locating');
+      showStatusTip("正在获取当前位置...", 2000);
+
+      // 使用已有的定位控件进行定位
+      geolocationControl.getCurrentPosition();
+    }
+
+    // 发送位置信息给Flutter
+    function sendLocationToFlutter() {
+      if (!currentSelection.latitude || !currentSelection.longitude || selectedLocationIndex === -1) {
+        console.log('没有选择位置');
+        return;
+      }
+
+      const selectedLocation = nearbyLocations[selectedLocationIndex];
+
+      // 构建回调URL，传递位置信息给Flutter应用
+      const callbackUrl = `http://callback?latitude=${selectedLocation.location.lat}&longitude=${selectedLocation.location.lng}&name=${encodeURIComponent(selectedLocation.name || '')}&address=${encodeURIComponent(selectedLocation.address || '')}`;
+
+      console.log('发送位置信息给Flutter:', {
+        latitude: selectedLocation.location.lat,
+        longitude: selectedLocation.location.lng,
+        name: selectedLocation.name,
+        address: selectedLocation.address
+      });
+      console.log('回调URL:', callbackUrl);
+
+      // 直接跳转到回调URL，Flutter会拦截并更新位置信息
+      window.location.href = callbackUrl;
+    }
+
+    // 清除选择
+    function clearSelection() {
+      // 移除标记点
+      if (currentMarker) {
+        map.remove(currentMarker);
+        currentMarker = null;
+      }
+
+      // 重置地图中心到世界地图
+      map.setCenter([0, 0]);
+      map.setZoom(2);
+
+      // 清除全局选择信息
+      currentSelection = {
+        latitude: null,
+        longitude: null,
+        address: null,
+        name: null
+      };
+
+      // 清除位置列表
+      nearbyLocation
+      selectedLocationIndex = -1;
+      document.getElementById('locationList').innerHTML = '';
+
+      showStatusTip("已清除选择", 1500);
+    }
+
+
+
+    // 显示状态提示
+    function showStatusTip(message, duration = 2000) {
+      const tip = document.getElementById('statusTip');
+      tip.textContent = message;
+      tip.classList.add('show');
+
+      setTimeout(() => {
+        tip.classList.remove('show');
+      }, duration);
+    }
+
+    // 更新状态信息（兼容性函数）
+    function updateStatus(message) {
+      showStatusTip(message, 3000);
+    }
+
+    // 设置搜索框
+    function setupSearchBox() {
+      const searchInput = document.getElementById('searchInput');
+
+      searchInput.addEventListener('input', function () {
+        const keyword = this.value.trim();
+        if (keyword.length > 0) {
+          // 搜索POI
+          placeSearch.search(keyword, function (status, result) {
+            if (status === 'complete' && result.poiList && result.poiList.pois) {
+              // 将搜索结果添加到位置列表
+              nearbyLocations = [];
+
+              result.poiList.pois.forEach((poi, index) => {
+                if (index < 15) { // 限制显示数量
+                  nearbyLocations.push({
+                    name: poi.name,
+                    address: poi.address || poi.pname + poi.cityname + poi.adname,
+                    location: poi.location,
+                    distance: '',
+                    isCurrentLocation: false
+                  });
+                }
+              });
+
+              selectedLocationIndex = -1; // 搜索时不默认选择
+              updateLocationList();
+            }
+          });
+        }
+      });
+
+      // 搜索框失去焦点时，如果没有选择位置，恢复附近位置列表
+      searchInput.addEventListener('blur', function () {
+        if (this.value.trim() === '' && currentSelection.latitude && currentSelection.longitude) {
+          // 恢复附近位置列表
+          searchNearbyLocations(currentSelection.longitude, currentSelection.latitude);
+        }
+      });
+    }
+
+
+
+
+
+    // 添加触摸事件支持
+    document.addEventListener('DOMContentLoaded', function () {
+      // 阻止双击缩放
+      document.addEventListener('touchstart', function (e) {
+        if (e.touches.length > 1) {
+          e.preventDefault();
+        }
+      }, { passive: false });
+
+      let lastTouchEnd = 0;
+      document.addEventListener('touchend', function (e) {
+        const now = (new Date()).getTime();
+        if (now - lastTouchEnd <= 300) {
+          e.preventDefault();
+        }
+        lastTouchEnd = now;
+      }, false);
+
+
+    });
+  </script>
+</body>
+
+</html>
+

@@ -1,0 +1,64 @@
+services:
+  # MySQL 数据库
+  mysql:
+    image: mysql:8.0
+    container_name: route-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: route123456
+      MYSQL_DATABASE: openim_route
+      TZ: Asia/Shanghai
+    ports:
+      - "23306:3306"
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    command: --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - route-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proute123456"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Redis 缓存
+  redis:
+    image: redis:7-alpine
+    container_name: route-redis
+    restart: always
+    ports:
+      - "26379:6379"
+    volumes:
+      - ./data/redis:/data
+    networks:
+      - route-network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 路由服务（已禁用，使用脚本启动）
+  # route-service:
+  #   build: .
+  #   container_name: route-service
+  #   restart: always
+  #   ports:
+  #     - "10010:10010"
+  #   volumes:
+  #     - ./config.yaml:/app/config.yaml
+  #     - ./logs:/app/logs
+  #   depends_on:
+  #     mysql:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #   networks:
+  #     - route-network
+  #   environment:
+  #     TZ: Asia/Shanghai
+
+networks:
+  route-network:
+    driver: bridge
