@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="a50a5f68-9f68-4772-8c99-b55a268c19b2" name="更改" comment="调整下这个拉取消息权限">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/rpc/group/group.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/rpc/group/group.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/tools/conversation.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/conversation.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/tools/cron_task.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/tools/cron_task.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="monday &lt;16387911+monday0052@user.noreply.gitee.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="aws" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLabMergeRequestFiltersHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPENED&quot;,
+    &quot;assignee&quot;: {
+      &quot;type&quot;: &quot;org.jetbrains.plugins.gitlab.mergerequest.ui.filters.GitLabMergeRequestsFiltersValue.MergeRequestsMemberFilterValue.MergeRequestsAssigneeFilterValue&quot;,
+      &quot;username&quot;: &quot;david&quot;,
+      &quot;fullname&quot;: &quot;david&quot;
+    }
+  }
+}</component>
+  <component name="GitLabMergeRequestsSettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;first&quot;: &quot;http://gitlab.imtest88.com/openim/server.git&quot;,
+    &quot;second&quot;: &quot;ceafc494-cedf-4426-a258-fe660e522e56&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="33vHfdncqmpjcLUJr9CFRQg4B4e" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;aws&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/product/openIm/server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Open-IM-Server-Enterprise" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Open-IM-Server-Enterprise" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="a50a5f68-9f68-4772-8c99-b55a268c19b2" name="更改" comment="" />
+      <created>1760190730286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760190730286</updated>
+      <workItem from="1760190731621" duration="78000" />
+      <workItem from="1760190820157" duration="1403000" />
+      <workItem from="1760193534153" duration="354000" />
+      <workItem from="1760194215571" duration="5000" />
+      <workItem from="1760194653446" duration="130000" />
+      <workItem from="1760194791932" duration="1809000" />
+      <workItem from="1760271527776" duration="6886000" />
+      <workItem from="1760942309269" duration="21000" />
+      <workItem from="1760942337252" duration="785000" />
+      <workItem from="1760966156444" duration="621000" />
+      <workItem from="1760969296888" duration="450000" />
+      <workItem from="1761039487219" duration="300000" />
+      <workItem from="1761636563509" duration="20000" />
+      <workItem from="1761716818118" duration="3000" />
+      <workItem from="1761829259139" duration="759000" />
+      <workItem from="1761830795481" duration="1207000" />
+      <workItem from="1761832021728" duration="2601000" />
+      <workItem from="1761837353841" duration="39000" />
+      <workItem from="1761837407839" duration="26000" />
+      <workItem from="1761837444951" duration="83000" />
+      <workItem from="1762171702293" duration="39000" />
+      <workItem from="1763294416688" duration="4838000" />
+      <workItem from="1763354934939" duration="989000" />
+      <workItem from="1763360124394" duration="503000" />
+      <workItem from="1763431918074" duration="1300000" />
+      <workItem from="1763524796700" duration="3035000" />
+      <workItem from="1763531935867" duration="25000" />
+      <workItem from="1763531971220" duration="315000" />
+      <workItem from="1763532301481" duration="4903000" />
+      <workItem from="1763646952115" duration="1184000" />
+      <workItem from="1763650731750" duration="2356000" />
+      <workItem from="1763653613862" duration="28000" />
+      <workItem from="1763653649356" duration="28000" />
+      <workItem from="1763715854042" duration="2407000" />
+      <workItem from="1763731012191" duration="15000" />
+      <workItem from="1763736419716" duration="2605000" />
+      <workItem from="1763799494519" duration="1130000" />
+      <workItem from="1763804263433" duration="612000" />
+      <workItem from="1763805978267" duration="35000" />
+      <workItem from="1763818291694" duration="3691000" />
+      <workItem from="1763997817873" duration="2450000" />
+      <workItem from="1764587168973" duration="1339000" />
+      <workItem from="1764854222586" duration="2547000" />
+      <workItem from="1765004034912" duration="4106000" />
+      <workItem from="1769057024736" duration="1616000" />
+    </task>
+    <task id="LOCAL-00001" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1760193641602</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1760193641602</updated>
+    </task>
+    <task id="LOCAL-00002" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1760942344084</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1760942344084</updated>
+    </task>
+    <task id="LOCAL-00003" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1761636575325</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1761636575326</updated>
+    </task>
+    <task id="LOCAL-00004" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1763527161130</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1763527161130</updated>
+    </task>
+    <task id="LOCAL-00005" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1763527557802</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1763527557802</updated>
+    </task>
+    <task id="LOCAL-00006" summary="初始化">
+      <option name="closed" value="true" />
+      <created>1763533112527</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1763533112527</updated>
+    </task>
+    <task id="LOCAL-00007" summary="调整一下">
+      <option name="closed" value="true" />
+      <created>1763822423884</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1763822423884</updated>
+    </task>
+    <task id="LOCAL-00008" summary="调整一下">
+      <option name="closed" value="true" />
+      <created>1763996304940</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1763996304940</updated>
+    </task>
+    <task id="LOCAL-00009" summary="加好友加群">
+      <option name="closed" value="true" />
+      <created>1772124096144</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772124096144</updated>
+    </task>
+    <task id="LOCAL-00010" summary="加好友加群">
+      <option name="closed" value="true" />
+      <created>1774018543450</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1774018543450</updated>
+    </task>
+    <task id="LOCAL-00011" summary="加好友加群 权限校验">
+      <option name="closed" value="true" />
+      <created>1774180004297</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1774180004297</updated>
+    </task>
+    <task id="LOCAL-00012" summary="调整下这个拉取消息权限">
+      <option name="closed" value="true" />
+      <created>1778342207071</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1778342207071</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="b0649e78-9120-42cd-abc4-2ddb3a25869d" value="TOOL_WINDOW" />
+        <entry key="a399da7c-0b5b-4d8c-b41c-cb198f1473b4" value="TOOL_WINDOW" />
+        <entry key="d9cda8e9-1754-4bcb-921b-164e00e2fbf8" value="TOOL_WINDOW" />
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/aws" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/yh" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="a399da7c-0b5b-4d8c-b41c-cb198f1473b4">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/yh" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="b0649e78-9120-42cd-abc4-2ddb3a25869d">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/aws" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+        <entry key="d9cda8e9-1754-4bcb-921b-164e00e2fbf8">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="初始化" />
+    <MESSAGE value="调整一下" />
+    <MESSAGE value="加好友加群" />
+    <MESSAGE value="加好友加群 权限校验" />
+    <MESSAGE value="调整下这个拉取消息权限" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整下这个拉取消息权限" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
+  </component>
+</project>
